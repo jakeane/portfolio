@@ -5,13 +5,19 @@ const autoprefixer = require('autoprefixer');
 const env = process.env.NODE_ENV || 'development';
 // set to 'production' or 'development' in your env
 
-const finalCSSLoader = (env === 'production') ? MiniCssExtractPlugin.loader : { loader: 'style-loader' };
+// eslint-disable-next-line operator-linebreak
+const finalCSSLoader =
+  env === 'production'
+    ? MiniCssExtractPlugin.loader
+    : { loader: 'style-loader' };
 
 module.exports = {
   mode: env,
+  output: { publicPath: '/' },
   entry: ['./src'], // this is where our app lives
   devServer: {
     hot: true,
+    historyApiFallback: true,
   },
   devtool: 'source-map', // this enables debuggin with source in chrome devtools
   module: {
@@ -65,6 +71,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './200.html',
     }),
   ],
 };
