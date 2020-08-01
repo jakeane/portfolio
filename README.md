@@ -1,11 +1,11 @@
 # Title
 
-[deployed url](http://starterpack-jakeane.surge.sh/)
+_description_
+
+[deployed url](http://url-if-deployed-here)
 
 ## What Worked Well
-Everything. The instructions were clear for the most part.
 
 ## What Didn't
-Nothing really. There were a moment where the instrucitons were unclear when adding the hot reloading. 
 
 ## Screenshots
