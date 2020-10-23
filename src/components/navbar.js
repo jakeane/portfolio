@@ -26,12 +26,6 @@ const a11yProps = (index) => {
 };
 
 const NavBar = (props) => {
-  // const [value, setValue] = useState(0);
-
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
-
   return (
     <div>
       <AppBar position="fixed">
@@ -46,18 +40,6 @@ const NavBar = (props) => {
             <LinkTab label="Experience" href="/experience" {...a11yProps(2)} />
             <LinkTab label="Interests" href="/interests" {...a11yProps(3)} />
           </Tabs>
-          {/* <IconButton>
-          <Typography variant="body1">Home</Typography>
-        </IconButton>
-        <IconButton compo>
-          <Typography variant="body1">Projects</Typography>
-        </IconButton>
-        <IconButton>
-          <Typography variant="body1">Experience</Typography>
-        </IconButton>
-        <IconButton>
-          <Typography variant="body1">Interests</Typography>
-        </IconButton> */}
         </Grid>
       </AppBar>
     </div>

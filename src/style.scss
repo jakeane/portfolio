@@ -18,7 +18,7 @@ html {
 }
 
 div.buffer {
-  margin-top: 48px;
+  padding-top: 48px;
 }
 
 div.card {
@@ -32,8 +32,17 @@ div.item {
   width: 90%;
 }
 
+div.grid {
+  width: 48%;
+}
+
 div.profile {
   width: 200px;
   height: auto;
   margin-right: 30px;
+}
+
+img.preview {
+  width: 90%;
+  height: auto;
 }
