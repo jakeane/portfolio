@@ -1,7 +1,7 @@
 body,
 html {
   font-family: 'Roboto', sans-serif;
-  background-color: white;
+  background-color: #cccccc;
   height: 100%;
 }
 
@@ -19,4 +19,21 @@ html {
 
 div.buffer {
   margin-top: 48px;
+}
+
+div.card {
+  background-color: #999999;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px;
+}
+
+div.item {
+  width: 90%;
+}
+
+div.profile {
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
 }
