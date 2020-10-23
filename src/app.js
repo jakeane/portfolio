@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import Box from '@material-ui/core/Box';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './style.scss';
 import NavBar from './components/navbar';
@@ -27,30 +28,32 @@ function TabPanel(props) {
 }
 
 const App = () => {
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(3);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <div>
-      <NavBar value={value} handleChange={handleChange} />
-      <div className="buffer">
-        <TabPanel value={value} index={0}>
-          <Home />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Projects />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Experience />
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          <Interests />
-        </TabPanel>
+    <Router>
+      <div>
+        <NavBar value={value} handleChange={handleChange} />
+        <div className="buffer">
+          <TabPanel value={value} index={0}>
+            <Home />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Projects />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <Experience />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <Interests />
+          </TabPanel>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

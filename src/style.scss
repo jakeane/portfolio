@@ -42,7 +42,23 @@ div.profile {
   margin-right: 30px;
 }
 
+div.interestData {
+  width: calc(100% - 125px);
+}
+
 img.preview {
   width: 90%;
   height: auto;
+}
+
+img.interestsPreview {
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
