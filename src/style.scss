@@ -1,0 +1,64 @@
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #cccccc;
+  height: 100%;
+}
+
+.logo {
+  background-image: url('img/creed.jpg');
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.active {
+  color: pink;
+}
+
+div.buffer {
+  padding-top: 48px;
+}
+
+div.card {
+  background-color: #999999;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px;
+}
+
+div.item {
+  width: 90%;
+}
+
+div.grid {
+  width: 48%;
+}
+
+div.profile {
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
+}
+
+div.interestData {
+  width: calc(100% - 125px);
+}
+
+img.preview {
+  width: 90%;
+  height: auto;
+}
+
+img.interestsPreview {
+  height: 100px;
+  width: 100px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
