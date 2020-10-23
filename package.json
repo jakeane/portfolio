@@ -2,7 +2,8 @@
   "name": "starterpack-jakeane",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/dartmouth-cs52-20X/starterpack-jakeane",
+  "homepage": "http://jakeane.github.io/jkeane.me",
+  "repository": "https://github.com/jakeane/jkeane.me",
   "author": "Jack Keane <john.f.keane.22@dartmouth.edu>",
   "license": "MIT",
   "scripts": {
@@ -10,7 +11,9 @@
     "test": "eslint src/**.js",
     "build": "yarn clean; NODE_ENV=production webpack --colors",
     "clean": "rimraf dist",
-    "deploy": "yarn build; surge -p dist -d starterpack-jakeane.surge.sh; yarn clean"
+    "olddeploy": "yarn build; surge -p dist -d starterpack-jakeane.surge.sh; yarn clean",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -44,6 +47,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.2",
+    "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
     "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
