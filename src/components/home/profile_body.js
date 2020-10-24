@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const ProfileBody = () => {
   return (
     <Grid item className="item">
-      <Grid container className="card">
+      <Grid container className="homeCard">
         <Typography variant="body1" color="textSecondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus
           metus quis varius cursus. In vitae rhoncus libero. Donec placerat nisl

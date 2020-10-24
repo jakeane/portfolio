@@ -12,7 +12,7 @@ const ExperienceItem = (props) => {
       <Grid container direction="column" className="card">
         <Grid item>
           <Grid container direction="row" justify="space-between">
-            <Typography variant="h5" color="textPrimary">
+            <Typography variant="h5" color="textPrimary" className="position">
               {props.data.position}
             </Typography>
             <Typography variant="h6" color="textSecondary">
@@ -20,11 +20,13 @@ const ExperienceItem = (props) => {
             </Typography>
           </Grid>
         </Grid>
-        <Typography color="textSecondary">{props.data.employer}</Typography>
+        <Typography color="textSecondary" fontWeight="fontWeightLight">
+          {props.data.employer}
+        </Typography>
         <List>
           {props.data.responsibilities.map((resp) => {
             return (
-              <ListItem key={resp}>
+              <ListItem key={resp} alignItems="flex-start">
                 <ChevronRightIcon color="secondary" />
                 <Typography varient="body1" color="textSecondary">
                   {resp}

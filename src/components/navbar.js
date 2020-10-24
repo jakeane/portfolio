@@ -29,17 +29,29 @@ const NavBar = (props) => {
   return (
     <div>
       <AppBar position="fixed">
-        <Grid container direction="row" justify="flex-end">
-          <Tabs
-            value={props.value}
-            onChange={props.handleChange}
-            selectionFollowsFocus
-          >
-            <LinkTab label="Home" href="/home" {...a11yProps(0)} />
-            <LinkTab label="Projects" href="/projects" {...a11yProps(1)} />
-            <LinkTab label="Experience" href="/experience" {...a11yProps(2)} />
-            <LinkTab label="Interests" href="/interests" {...a11yProps(3)} />
-          </Tabs>
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="center"
+        >
+          <img src="src/img/portfolio_logo.png" alt="logo" className="logo" />
+          <Grid item>
+            <Tabs
+              value={props.value}
+              onChange={props.handleChange}
+              selectionFollowsFocus
+            >
+              <LinkTab label="Home" href="/home" {...a11yProps(0)} />
+              <LinkTab label="Projects" href="/projects" {...a11yProps(1)} />
+              <LinkTab
+                label="Experience"
+                href="/experience"
+                {...a11yProps(2)}
+              />
+              <LinkTab label="Interests" href="/interests" {...a11yProps(3)} />
+            </Tabs>
+          </Grid>
         </Grid>
       </AppBar>
     </div>

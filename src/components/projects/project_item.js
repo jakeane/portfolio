@@ -11,19 +11,44 @@ const ProjectItem = (props) => {
     window.open(location, '_blank');
   };
 
+  const lastUpdate = new Date(props.data.last_update);
+
+  const updateText = `Last updated: ${lastUpdate.getMonth()}/${lastUpdate.getDay()}/${lastUpdate.getFullYear()}`;
+
   return (
     <Grid item className="grid">
-      <Grid container direction="column" className="card">
-        <Typography variant="h5" color="textPrimary">
-          {props.data.title}
-        </Typography>
-        <Typography variant="subtitle2" color="textSecondary">
-          Built with: {props.data.language}
-        </Typography>
-        <img alt="filler" src={props.data.image} className="projectsPreview" />
-        <Typography variant="subtitle1" color="textSecondary">
-          {props.data.description}
-        </Typography>
+      <Grid
+        container
+        direction="column"
+        justify="space-between"
+        className="card"
+      >
+        <Grid item>
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="center"
+          >
+            <Typography variant="h5" color="textPrimary">
+              {props.data.title}
+            </Typography>
+            <Typography variant="subtitle2" color="textSecondary">
+              {updateText}
+            </Typography>
+          </Grid>
+          <Typography variant="subtitle2" color="textSecondary">
+            Built with: {props.data.language}
+          </Typography>
+          <img
+            alt="filler"
+            src={props.data.image}
+            className="projectsPreview"
+          />
+          <Typography variant="subtitle1" color="textSecondary">
+            {props.data.description}
+          </Typography>
+        </Grid>
         <Grid item>
           <Grid container direction="row">
             <IconButton
@@ -31,7 +56,9 @@ const ProjectItem = (props) => {
               color="secondary"
             >
               <GitHubIcon />
-              <Typography color="textSecondary">Code</Typography>
+              <Typography color="textSecondary" className="textButton">
+                Code
+              </Typography>
             </IconButton>
             {props.data.live ? (
               <IconButton
@@ -39,7 +66,9 @@ const ProjectItem = (props) => {
                 color="secondary"
               >
                 <WebIcon />
-                <Typography color="textSecondary">Live</Typography>
+                <Typography color="textSecondary" className="textButton">
+                  Live
+                </Typography>
               </IconButton>
             ) : undefined}
           </Grid>

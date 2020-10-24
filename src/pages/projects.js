@@ -5,28 +5,30 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 // import projectData from '../data/project_data';
 import ProjectItem from '../components/projects/project_item';
 
 const Projects = (props) => {
   const projectList =
-    props.data.length > 0
-      ? props.data
-          .map((data) => {
-            return <ProjectItem data={data} key={data.title} />;
-          })
-          .sort((a, b) => {
-            return (
-              new Date(b.props.data.last_update) -
-              new Date(a.props.data.last_update)
-            );
-          })
-      : undefined;
+    props.data.length > 0 ? (
+      props.data
+        .map((data) => {
+          return <ProjectItem data={data} key={data.title} />;
+        })
+        .sort((a, b) => {
+          return (
+            new Date(b.props.data.last_update) -
+            new Date(a.props.data.last_update)
+          );
+        })
+    ) : (
+      <CircularProgress color="secondary" />
+    );
 
   return (
     <Container maxWidth="md">
-      <Typography variant="body1">Scraped from GitHub</Typography>
       <Grid
         container
         direction="row"
@@ -37,6 +39,9 @@ const Projects = (props) => {
       >
         {projectList}
       </Grid>
+      <Typography variant="body1" className="footnote ftProjects">
+        Collected from GitHub
+      </Typography>
     </Container>
   );
 };

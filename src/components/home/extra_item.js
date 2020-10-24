@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const ExtraItem = (props) => {
   return (
-    <Grid item>
+    <Grid item className="extra">
       <Typography variant="h4" color="textSecondary">
         {props.question}
       </Typography>

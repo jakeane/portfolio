@@ -8,7 +8,7 @@ import ExtraItem from './extra_item';
 const ProfileExtra = () => {
   return (
     <Grid item className="item">
-      <Grid container direction="column" className="card">
+      <Grid container direction="column" className="homeCard">
         {extraData.map((data) => {
           return (
             <ExtraItem

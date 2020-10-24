@@ -7,7 +7,7 @@ import ProfileHeader from '../components/home/profile_header';
 import ProfileBody from '../components/home/profile_body';
 import ProfileExtra from '../components/home/profile_extra';
 
-const Home = (props) => {
+const Home = () => {
   const navigateTo = (location) => {
     console.log('Go to:', location);
   };
