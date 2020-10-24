@@ -26,6 +26,7 @@ div.card {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 2px 2px 5px;
+  height: 100%;
 }
 
 div.item {
@@ -34,6 +35,7 @@ div.item {
 
 div.grid {
   width: 48%;
+  height: 400px;
 }
 
 div.profile {
@@ -46,9 +48,10 @@ div.interestData {
   width: calc(100% - 125px);
 }
 
-img.preview {
-  width: 90%;
-  height: auto;
+img.projectsPreview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 img.interestsPreview {

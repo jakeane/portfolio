@@ -9,6 +9,7 @@ import WebIcon from '@material-ui/icons/Web';
 const ProjectItem = (props) => {
   const navigateTo = (location) => {
     console.log('Go to:', location);
+    window.open(location, '_blank');
   };
 
   return (
@@ -16,27 +17,22 @@ const ProjectItem = (props) => {
       <Grid container direction="column" className="card">
         <Typography variant="h5">{props.data.title}</Typography>
         <Typography variant="subtitle2">
-          Built with: {props.data.tech.join(', ')}
+          Built with: {props.data.language}
         </Typography>
-        <img
-          alt="filler"
-          src="https://picsum.photos/400/200"
-          className="preview"
-        />
-        <Typography variant="subtitle1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac
-          arcu vitae dolor congue mattis.
-        </Typography>
+        <img alt="filler" src={props.data.image} className="projectsPreview" />
+        <Typography variant="subtitle1">{props.data.description}</Typography>
         <Grid item>
           <Grid container direction="row">
-            <IconButton onClick={() => navigateTo(props.data.live)}>
-              <WebIcon />
-              <Typography>Live</Typography>
-            </IconButton>
             <IconButton onClick={() => navigateTo(props.data.url)}>
               <GitHubIcon />
               <Typography>Code</Typography>
             </IconButton>
+            {props.data.live ? (
+              <IconButton onClick={() => navigateTo(props.data.live)}>
+                <WebIcon />
+                <Typography>Live</Typography>
+              </IconButton>
+            ) : undefined}
           </Grid>
         </Grid>
       </Grid>

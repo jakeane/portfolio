@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@material-ui/core/Box';
 import { BrowserRouter as Router } from 'react-router-dom';
+import axios from 'axios';
 
 import './style.scss';
 import NavBar from './components/navbar';
@@ -9,6 +10,8 @@ import Home from './pages/home';
 import Projects from './pages/projects';
 import Experience from './pages/experience';
 import Interests from './pages/interests';
+
+const localUrl = 'http://localhost:9090';
 
 function TabPanel(props) {
   // eslint-disable-next-line object-curly-newline
@@ -28,7 +31,17 @@ function TabPanel(props) {
 }
 
 const App = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
+  const [projects, setProjects] = useState({});
+  const [interests, setInterests] = useState({});
+
+  useEffect(() => {
+    axios.get(`${localUrl}/api/data`).then((res) => {
+      console.log('data', res.data);
+      setProjects(res.data.github);
+      setInterests(res.data.reddit);
+    });
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -43,13 +56,13 @@ const App = () => {
             <Home />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <Projects />
+            <Projects data={projects} />
           </TabPanel>
           <TabPanel value={value} index={2}>
             <Experience />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <Interests />
+            <Interests data={interests} />
           </TabPanel>
         </div>
       </div>
