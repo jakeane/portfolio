@@ -1,11 +1,4 @@
-# Title
+# jkeane.me Portfolio
 
-_description_
+![website screenshot](https://raw.githubusercontent.com/jakeane/jkeane.me/gh-pages/src/img/portfolio_preview.png)
 
-[deployed url](http://url-if-deployed-here)
-
-## What Worked Well
-
-## What Didn't
-
-## Screenshots
