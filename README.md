@@ -1,11 +1,6 @@
-# Title
+# jkeane.me Portfolio
 
-_description_
+Link to [website](http://jakeane.surge.sh/)
 
-[deployed url](http://url-if-deployed-here)
+![website screenshot](https://raw.githubusercontent.com/jakeane/jkeane.me/gh-pages/src/img/portfolio_preview.png)
 
-## What Worked Well
-
-## What Didn't
-
-## Screenshots
