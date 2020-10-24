@@ -8,6 +8,13 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const ProfileHeader = (props) => {
+  const github = 'https://github.com/jakeane';
+  const linkedin = 'https://www.linkedin.com/in/jack-keane-co/';
+
+  const navigateTo = (location) => {
+    window.open(location, '_blank');
+  };
+
   return (
     <Grid item className="item">
       <Grid
@@ -26,14 +33,24 @@ const ProfileHeader = (props) => {
         </Grid>
         <Grid item>
           <Grid container direction="column">
-            <Typography variant="h2">Jack Keane</Typography>
-            <Typography variant="subtitle1">CS Student</Typography>
+            <Typography variant="h2" color="textPrimary">
+              Jack Keane
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary">
+              CS Student
+            </Typography>
             <Grid item>
               <Grid container direction="row">
-                <IconButton onClick={() => props.navigateTo('GitHub')}>
+                <IconButton
+                  onClick={() => navigateTo(github)}
+                  color="secondary"
+                >
                   <GitHubIcon />
                 </IconButton>
-                <IconButton onClick={() => props.navigateTo('LinkedIn')}>
+                <IconButton
+                  onClick={() => navigateTo(linkedin)}
+                  color="secondary"
+                >
                   <LinkedInIcon />
                 </IconButton>
               </Grid>

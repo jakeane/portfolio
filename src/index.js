@@ -1,26 +1,14 @@
 /* eslint-disable comma-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { ThemeProvider } from '@material-ui/core/styles';
 
-import reducers from './reducers';
 import App from './app';
-
-const store = createStore(
-  reducers,
-  {},
-  compose(
-    applyMiddleware(),
-    window.__REDUX_DEVTOOLS_EXTENSION__
-      ? window.__REDUX_DEVTOOLS_EXTENSION__()
-      : (f) => f
-  )
-);
+import MainTheme from './themes';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ThemeProvider theme={MainTheme}>
     <App />
-  </Provider>,
+  </ThemeProvider>,
   document.getElementById('main')
 );

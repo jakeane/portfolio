@@ -24,11 +24,11 @@ const InterestsItem = (props) => {
           <Grid item className="interestData">
             <Grid container direction="column">
               <Grid item xs>
-                <Typography variant="h6" noWrap>
+                <Typography variant="h6" noWrap color="textPrimary">
                   {props.data.headline}
                 </Typography>
               </Grid>
-              <Typography variant="subtitle1">
+              <Typography variant="subtitle1" color="textSecondary">
                 Found on {props.data.source}
               </Typography>
             </Grid>

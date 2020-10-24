@@ -8,29 +8,38 @@ import WebIcon from '@material-ui/icons/Web';
 
 const ProjectItem = (props) => {
   const navigateTo = (location) => {
-    console.log('Go to:', location);
     window.open(location, '_blank');
   };
 
   return (
     <Grid item className="grid">
       <Grid container direction="column" className="card">
-        <Typography variant="h5">{props.data.title}</Typography>
-        <Typography variant="subtitle2">
+        <Typography variant="h5" color="textPrimary">
+          {props.data.title}
+        </Typography>
+        <Typography variant="subtitle2" color="textSecondary">
           Built with: {props.data.language}
         </Typography>
         <img alt="filler" src={props.data.image} className="projectsPreview" />
-        <Typography variant="subtitle1">{props.data.description}</Typography>
+        <Typography variant="subtitle1" color="textSecondary">
+          {props.data.description}
+        </Typography>
         <Grid item>
           <Grid container direction="row">
-            <IconButton onClick={() => navigateTo(props.data.url)}>
+            <IconButton
+              onClick={() => navigateTo(props.data.url)}
+              color="secondary"
+            >
               <GitHubIcon />
-              <Typography>Code</Typography>
+              <Typography color="textSecondary">Code</Typography>
             </IconButton>
             {props.data.live ? (
-              <IconButton onClick={() => navigateTo(props.data.live)}>
+              <IconButton
+                onClick={() => navigateTo(props.data.live)}
+                color="secondary"
+              >
                 <WebIcon />
-                <Typography>Live</Typography>
+                <Typography color="textSecondary">Live</Typography>
               </IconButton>
             ) : undefined}
           </Grid>

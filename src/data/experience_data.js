@@ -1,7 +1,7 @@
 const experienceData = [
   {
     position: 'Teaching Assistant',
-    employer: 'Dartmouth College',
+    employer: ' Dartmouth College',
     start: 'Sep. 2020',
     end: 'Present',
     responsibilities: [

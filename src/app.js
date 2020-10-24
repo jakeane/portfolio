@@ -11,7 +11,7 @@ import Projects from './pages/projects';
 import Experience from './pages/experience';
 import Interests from './pages/interests';
 
-const localUrl = 'http://localhost:9090';
+const dbUrl = 'https://jkeane-portfolio.herokuapp.com';
 
 function TabPanel(props) {
   // eslint-disable-next-line object-curly-newline
@@ -31,12 +31,12 @@ function TabPanel(props) {
 }
 
 const App = () => {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
   const [projects, setProjects] = useState({});
   const [interests, setInterests] = useState({});
 
   useEffect(() => {
-    axios.get(`${localUrl}/api/data`).then((res) => {
+    axios.get(`${dbUrl}/api/data`).then((res) => {
       console.log('data', res.data);
       setProjects(res.data.github);
       setInterests(res.data.reddit);

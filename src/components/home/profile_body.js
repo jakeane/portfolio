@@ -7,7 +7,7 @@ const ProfileBody = () => {
   return (
     <Grid item className="item">
       <Grid container className="card">
-        <Typography variant="body1">
+        <Typography variant="body1" color="textSecondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus
           metus quis varius cursus. In vitae rhoncus libero. Donec placerat nisl
           sit amet augue faucibus, nec aliquam magna commodo. Proin est sapien,
