@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 
+import logo from '../img/portfolio_logo.png';
+
 const LinkTab = (props) => {
   return (
     <Tab
@@ -35,7 +37,7 @@ const NavBar = (props) => {
           justify="space-between"
           alignItems="center"
         >
-          <img src="src/img/portfolio_logo.png" alt="logo" className="logo" />
+          <img src={logo} alt="logo" className="logo" />
           <Grid item>
             <Tabs
               value={props.value}

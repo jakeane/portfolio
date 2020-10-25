@@ -8,14 +8,10 @@ import ProfileBody from '../components/home/profile_body';
 import ProfileExtra from '../components/home/profile_extra';
 
 const Home = () => {
-  const navigateTo = (location) => {
-    console.log('Go to:', location);
-  };
-
   return (
     <Container maxWidth="md">
       <Grid container direction="column" alignItems="center" spacing={3}>
-        <ProfileHeader navigateTo={navigateTo} />
+        <ProfileHeader />
         <ProfileBody />
         <ProfileExtra />
       </Grid>

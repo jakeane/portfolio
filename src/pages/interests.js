@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 /* eslint-disable operator-linebreak */
 import React from 'react';
 
@@ -8,9 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import InterestsItem from '../components/interests/interests_item';
-// import interestsData from '../data/interests_data';
 
 const Interests = (props) => {
+  // convert data into components
+  // render loading animation if no data
   const interestList =
     props.data.length > 0 ? (
       props.data.map((data) => {

@@ -8,16 +8,14 @@ const ProfileBody = () => {
     <Grid item className="item">
       <Grid container className="homeCard">
         <Typography variant="body1" color="textSecondary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus
-          metus quis varius cursus. In vitae rhoncus libero. Donec placerat nisl
-          sit amet augue faucibus, nec aliquam magna commodo. Proin est sapien,
-          convallis sit amet arcu et, eleifend hendrerit ligula. Nulla bibendum
-          erat eu mi sagittis vehicula. Vivamus tristique purus non nunc
-          venenatis aliquam. Curabitur nec neque est. Vestibulum tincidunt est
-          nibh, ut scelerisque mi sagittis sed. Phasellus molestie tristique
-          eros, vel egestas felis. Aenean ut elit eget ex sodales scelerisque.
-          Aenean mattis risus nisl. Duis neque lectus, interdum eget mi nec,
-          tincidunt rhoncus erat. Cras tincidunt sagittis leo, at.
+          I am a computer science and quantitative social science student at
+          Dartmouth College. I find myself most interested in{' '}
+          <span className="highlight">application development</span> and{' '}
+          <span className="highlight">machine learning</span>, especially where
+          the two areas intersect. My current work pertains to the AIM HIGH
+          Laboratory at the Geisel School of Medicine, where I am developing a{' '}
+          <span className="highlight">chatbot</span> using Flutter and ParlAI
+          aimed to help people manage their anxiety and/or depression.
         </Typography>
       </Grid>
     </Grid>

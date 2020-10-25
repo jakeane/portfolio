@@ -11,9 +11,12 @@ const ProjectItem = (props) => {
     window.open(location, '_blank');
   };
 
+  // convert iso date to generic date
   const lastUpdate = new Date(props.data.last_update);
 
-  const updateText = `Last updated: ${lastUpdate.getMonth()}/${lastUpdate.getDay()}/${lastUpdate.getFullYear()}`;
+  const updateText = `Last updated: ${
+    lastUpdate.getMonth() + 1
+  }/${lastUpdate.getDate()}/${lastUpdate.getFullYear()}`;
 
   return (
     <Grid item className="grid">

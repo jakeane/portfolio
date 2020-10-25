@@ -13,6 +13,7 @@ import Interests from './pages/interests';
 
 const dbUrl = 'https://jkeane-portfolio.herokuapp.com';
 
+// Contains each page of site
 function TabPanel(props) {
   // eslint-disable-next-line object-curly-newline
   const { children, value, index, ...other } = props;
@@ -35,6 +36,7 @@ const App = () => {
   const [projects, setProjects] = useState({});
   const [interests, setInterests] = useState({});
 
+  // fetch data then update
   useEffect(() => {
     axios.get(`${dbUrl}/api/data`).then((res) => {
       console.log('data', res.data);
