@@ -1,0 +1,46 @@
+.box {
+    border-top: 1px solid white;
+    position: relative;
+}
+
+.left {
+    border-left: 1px solid white;
+}
+
+.right {
+    border-right: 1px solid white;
+}
+
+.box::before {
+    position: absolute;
+    top: -1px;
+    content:'';
+    border-top: 70px solid white;
+}
+
+.box::after {
+    position:absolute;
+    top:-2px;
+    content:'';
+    border-top: 70px solid black;
+}
+
+.left::before {
+    left: -1px;
+    border-right: 70px solid transparent;
+}
+
+.left::after {
+    left:-2px;
+    border-right: 70px solid transparent;
+}
+
+.right::before {
+    right: -1px;
+    border-left: 70px solid transparent;
+}
+
+.right::after {
+    right:-2px;
+    border-left: 70px solid transparent;
+}
