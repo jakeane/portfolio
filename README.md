@@ -1,24 +1,34 @@
-# jkeane.me Portfolio Frontend
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is the codebase for my portfolio frontend. Some of the information is hard coded in. However, as I am inherently lazy, I do not want to update this page whenever I am developing something new. To amend this issue, I run a scheduled task in the backend using the Heroku Scheduler plug-in, which uses the GitHub API to get and process data from my repositories.
+## Getting Started
 
-While I was at this, I figured I could use another API to perform a similar task. So, I also use the Reddit API to get data from my personal subreddit, where I cross-post articles that I find interest in.
+First, run the development server:
 
-## TODO
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-- Make images in project page adaptable to amount of content.
-- Add contact me page.
-- Implement more thoughtful UI/UX design.
-- "Load in" animations?
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Links
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-- View the [website](http://jakeane.surge.sh/)
-- View the [backend repo](https://github.com/jakeane/portfolio_server)
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
 
-## Screenshot
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-![website screenshot](https://raw.githubusercontent.com/jakeane/jkeane.me/gh-pages/src/img/portfolio_preview.png)
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
