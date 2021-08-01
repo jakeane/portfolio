@@ -1,4 +1,4 @@
-import AngledCorner from 'components/AngledCorner';
+import AngledCorner from 'components/utils/AngledCorner';
 
 import styles from 'styles/Landing.module.css';
 

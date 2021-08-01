@@ -8,6 +8,27 @@
 .exp_transition {
     border-right: 1px solid white;
     width: 60vw;
-    height: 40vh;
+    height: 25vh;
     margin-left: 20vw;
+}
+
+.proj_transition {
+    border-left: 1px solid white;
+    width: 60vw;
+    height: 25vh;
+    margin-left: 20vw;
+}
+
+.about_transition {
+    border-left: 1px solid white;
+    width: 60vw;
+    height: 25vh;
+    margin-left: 24.95vw;
+}
+
+.contact_transition {
+    border-right: 1px solid white;
+    width: 55vw;
+    height: 25vh;
+    margin-left: 24.95vw;
 }

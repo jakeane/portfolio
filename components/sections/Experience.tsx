@@ -1,5 +1,5 @@
 import styles from 'styles/Experience.module.css';
-import AngledCorner from './AngledCorner';
+import AngledCorner from '../utils/AngledCorner';
 
 const Experience = (): JSX.Element => (
   <div className={styles.main}>

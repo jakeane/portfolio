@@ -15,3 +15,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --corner-size: 100px;
+}

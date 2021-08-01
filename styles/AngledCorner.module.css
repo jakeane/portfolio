@@ -1,3 +1,4 @@
+
 .box {
     border-top: 1px solid white;
     position: relative;
@@ -15,32 +16,32 @@
     position: absolute;
     top: -1px;
     content:'';
-    border-top: 70px solid white;
+    border-top: var(--corner-size) solid white;
 }
 
 .box::after {
     position:absolute;
     top:-2px;
     content:'';
-    border-top: 70px solid black;
+    border-top: var(--corner-size) solid black;
 }
 
 .left::before {
     left: -1px;
-    border-right: 70px solid transparent;
+    border-right: var(--corner-size) solid transparent;
 }
 
 .left::after {
     left:-2px;
-    border-right: 70px solid transparent;
+    border-right: var(--corner-size) solid transparent;
 }
 
 .right::before {
     right: -1px;
-    border-left: 70px solid transparent;
+    border-left: var(--corner-size) solid transparent;
 }
 
 .right::after {
     right:-2px;
-    border-left: 70px solid transparent;
+    border-left: var(--corner-size) solid transparent;
 }
