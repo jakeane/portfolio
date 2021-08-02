@@ -17,7 +17,7 @@ const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) =
           height={60}
           width={!i ? 50 : 45}
         >
-          <div className={`${i % 2 ? styles.card_left : styles.card_right}`}>
+          <div className={`${i % 2 ? styles.card_left : styles.card_right} ${i === 0 ? styles.head_proj : ''}`}>
             <div
               style={
                 i % 2

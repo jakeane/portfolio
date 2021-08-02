@@ -2,6 +2,8 @@
     margin-left: 20vw;
 }
 
+
+
 .tail_proj {
     margin-left: 5vw;
 }
@@ -19,6 +21,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.head_proj {
+    margin-left: 5vw;
+    width: calc(100% - 5vw + 1px);
 }
 
 .data_left {
