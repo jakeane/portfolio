@@ -1,9 +1,10 @@
 import styles from 'styles/Projects.module.css';
 import projects from 'public/projects.json';
+import React from 'react';
 import AngledCorner from '../utils/AngledCorner';
 
-const Projects = (): JSX.Element => (
-  <div className={styles.main}>
+const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
+  <div className={styles.main} ref={ref}>
     {projects.map((p, i) => (
       <div key={i} className={i > 0 ? styles.tail_proj : undefined}>
         <AngledCorner
@@ -18,4 +19,4 @@ const Projects = (): JSX.Element => (
   </div>
 );
 
-export default Projects;
+export default React.forwardRef(Projects);

@@ -3,6 +3,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  /* top: 50%; */
+  top: 0; 
+  bottom: 0; 
+  margin-top: auto; 
+  margin-bottom: auto; 
+  height: 100px;
 }
 
 .exp_transition {

@@ -4,10 +4,9 @@ interface Props {
   width: number
   height: number
   right?: boolean
-  children: JSX.Element | JSX.Element[]
 }
 
-const AngledCorner = (props: Props): JSX.Element => (
+const AngledCorner: React.FC<Props> = (props) => (
   <div
     className={`${styles.box} ${props.right ? styles.right : styles.left}`}
     style={{ width: `${props.width}vw`, height: `${props.height}vh` }}

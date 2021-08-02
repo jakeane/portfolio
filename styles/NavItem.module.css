@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: .7;
+    transition: .25s;
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.current_container {
+    opacity: 1;
+    /* font-weight: bold; */
+}
+
+.container:hover {
+    opacity: 1;
+    /* font-weight: bold; */
+}
+
+.name {
+    margin: 6px;
+}
+
+.box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: black;
+}
+
+.current_box {
+    background-color: white;
+}
