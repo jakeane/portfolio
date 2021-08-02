@@ -4,7 +4,7 @@ interface Props {
   width: number
   height: number
   right?: boolean
-  children: JSX.Element
+  children: JSX.Element | JSX.Element[]
 }
 
 const AngledCorner = (props: Props): JSX.Element => (
