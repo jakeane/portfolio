@@ -1,18 +1,38 @@
 [
     {
         "name": "BetMate",
-        "description": "A platform to spectate and wager on chess matches"
+        "description": "A platform to spectate and wager on chess matches",
+        "clay": {
+            "file": "betmate",
+            "width": 300,
+            "height": 202.85
+        }
     },
     {
         "name": "Therabot",
-        "description": "A chatbot trained to be a mental health therapist"
+        "description": "A chatbot trained to be a mental health therapist",
+        "clay": {
+            "file": "therabot",
+            "width": 140.93,
+            "height": 300
+        }
     },
     {
         "name": "Whiteboard",
-        "description": "The mobile counterpart to a productivity platform"
+        "description": "The mobile counterpart to a productivity platform",
+        "clay": {
+            "file": "whiteboard",
+            "width": 148.53,
+            "height": 300
+        }
     },
     {
         "name": "Boboddy",
-        "description": "An acronym generator built around the Viterbi algorithm"
+        "description": "An acronym generator built around the Viterbi algorithm",
+        "clay": {
+            "file": "boboddy",
+            "width": 300,
+            "height": 235.53
+        }
     }
 ]
