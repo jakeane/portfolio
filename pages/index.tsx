@@ -20,17 +20,17 @@ const Home: React.FC = () => {
     const i = SECTIONS.indexOf(s);
     const el = navRefs.current[i];
     if (!el) return;
-    const offset = i === 0 ? -200 : -50;
-    const y = el.getBoundingClientRect().top + window.pageYOffset + offset;
+    const offset = i === 0 ? 200 : 40;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
   const getClosestPoint = (r: HTMLDivElement | null, i: number) => {
-    const endOffset = i === 4 ? 200 : 0;
+    const endOffset = i === 4 ? 200 : 40;
     const rect = r?.getBoundingClientRect();
     if (!rect) return 10000;
     const { top, bottom } = rect;
-    return Math.min(Math.abs(top), Math.abs(bottom)) - endOffset;
+    return Math.min(Math.abs(top) - endOffset, Math.abs(bottom));
   };
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Jack Keane</title>
         <meta name="description" content="Portfolio website for Jack Keane" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icons/logo_black.svg" />
       </Head>
 
       <main className={styles.main}>
