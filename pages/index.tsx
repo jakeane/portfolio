@@ -5,7 +5,8 @@ import Experience from 'components/sections/Experience';
 import Projects from 'components/sections/Projects';
 import About from 'components/sections/About';
 import Contact from 'components/sections/Contact';
-import NavItem from 'components/utils/NavItem';
+import NavBar from 'components/subcomponents/NavBar';
+import Heading from 'components/subcomponents/Heading';
 import styles from 'styles/Home.module.css';
 import { useEffect, useRef, useState } from 'react';
 
@@ -15,7 +16,8 @@ const Home: React.FC = () => {
   const navRefs = useRef<(HTMLDivElement | null)[]>(Array(5).fill(null));
   const [closestSection, setClosestSection] = useState(0);
 
-  const scrollTo = (i: number) => {
+  const scrollTo = (s: string) => {
+    const i = SECTIONS.indexOf(s);
     const el = navRefs.current[i];
     if (!el) return;
     const offset = i === 0 ? -200 : -50;
@@ -51,9 +53,9 @@ const Home: React.FC = () => {
       </Head>
 
       <main className={styles.main}>
-        <nav className={styles.nav}>
-          {SECTIONS.map((s, i) => <NavItem name={s} key={s} i={i} scrollTo={scrollTo} current={i === closestSection} />)}
-        </nav>
+        <NavBar scrollTo={scrollTo} closestSection={closestSection} />
+        <Heading />
+
         <Landing ref={(el) => { navRefs.current[0] = el; }} scrollTo={scrollTo} />
         <div className={styles.exp_transition}/>
         <Experience ref={(el) => { navRefs.current[1] = el; }} />

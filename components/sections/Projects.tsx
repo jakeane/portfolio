@@ -1,5 +1,5 @@
 import styles from 'styles/Projects.module.css';
-import projects from 'public/projects.json';
+import projects from 'public/data/projects.json';
 import React from 'react';
 import AngledCorner from '../utils/AngledCorner';
 

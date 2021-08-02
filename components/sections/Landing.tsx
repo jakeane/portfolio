@@ -4,7 +4,7 @@ import React from 'react';
 import styles from 'styles/Landing.module.css';
 
 interface Props {
-  scrollTo: (i: number) => void
+  scrollTo: (s: string) => void
 }
 
 const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, ref) => (
@@ -14,7 +14,7 @@ const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, r
       <h1 className={styles.name}>John Keane</h1>
       <p className={styles.subname}>(You can call me Jack)</p>
       <h2 className={styles.declaration}>Seeking full-time software engineering roles</h2>
-      <div className={styles.arrow} onClick={() => props.scrollTo(1)}/>
+      <div className={styles.arrow} onClick={() => props.scrollTo('Experience')}/>
     </AngledCorner>
     <div className={styles.rightpad} />
   </div>
