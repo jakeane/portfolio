@@ -7,6 +7,7 @@ import therabot from 'public/clays/therabot_black.png';
 import whiteboard from 'public/clays/whiteboard_black.png';
 import boboddy from 'public/clays/boboddy_black.png';
 import x from 'public/icons/x.svg';
+import newtab from 'public/icons/open_in_new.svg';
 
 import styles from 'styles/Projects.module.css';
 
@@ -56,8 +57,17 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
           <div>
             <h3 className={styles.modal_sumtitle}>Deliverables</h3>
             {Object.entries(project.deliverables).map(([name, link]) => (
-              <a key={name} href={link} target='_blank' rel='noreferrer'>
-                <p className={styles.modal_sumdata}>{name}</p>
+              <a
+                className={styles.modal_anchor}
+                key={name}
+                href={link}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <p className={`${styles.modal_sumdata} ${styles.modal_link}`}>
+                  {name}
+                </p>
+                <Image src={newtab} alt='new tab' />
               </a>
             ))}
           </div>

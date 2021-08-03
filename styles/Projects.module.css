@@ -165,6 +165,15 @@
     padding: 0;
 }
 
+.modal_anchor {
+    display: flex;
+}
+
+.modal_link {
+    margin-right: 3px;
+    text-decoration: underline;
+}
+
 .modal_content {
     display: flex;
     width: 100%;
