@@ -34,14 +34,18 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       const closest = navRefs.current
         .map((r, i) => ({ y: getClosestPoint(r, i), i }))
         .reduce((best, curr) => (
           best.y < curr.y ? best : curr
         ));
       setClosestSection(closest.i);
-    });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
