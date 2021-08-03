@@ -1,0 +1,188 @@
+.main {
+    margin-left: 20vw;
+}
+
+.tail_proj {
+    margin-left: 5vw;
+}
+
+.card_left {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.head_proj {
+    margin-left: 5vw;
+    width: calc(100% - 5vw + 1px);
+}
+
+.data_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    width: 350px;
+}
+
+.data_right {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.clay_left {
+    margin-left: -100px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    font-size: 25px;
+    color: #c4c4c4;
+    margin: 0;
+    padding: 0;
+}
+
+.learn_more {
+    display: flex;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.lm_text {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.betmate {
+    margin-right: -150px;
+    width: 300px;
+    height: 202.85px;
+}
+
+.therabot {
+    margin-left: -70.465px;
+    width: 140.93px;
+    height: 300px;
+}
+
+.whiteboard {
+    margin-right: -74.265px;
+    width: 148.53px;
+    height: 300px;
+}
+
+.boboddy {
+    margin-left: -150px;
+    width: 300px;
+    height: 235.53px;
+}
+
+.nomargin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.modal_background {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.modal {
+    position: fixed;
+    background-color: white;
+    border-radius: 2px;
+    color: black;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 55vh;
+    margin-top: -27.5vh;
+    margin-left: -30vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.x {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.modal_title {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+.modal_summary {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.modal_sumitem {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_sumtitle {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.modal_sumdata {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.modal_anchor {
+    display: flex;
+}
+
+.modal_link {
+    margin-right: 3px;
+    text-decoration: underline;
+}
+
+.modal_content {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal_explanation {
+    width: 20vw;
+    font-size: 18px;
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "company": "DALI Lab",
+        "position": "Software Engineer",
+        "start": "Jan 2021",
+        "end": "Present",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "dali"
+    },
+    {
+        "company": "Bank of America",
+        "position": "Software Engineer Intern",
+        "start": "Jun 2021",
+        "end": "Aug 2021",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "bofa"
+    },
+    {
+        "company": "Dartmouth College",
+        "position": "Research Assistant",
+        "start": "Mar 2021",
+        "end": "Jun 2021",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "dartmouth"
+    },
+    {
+        "company": "Geisel School of Medicine",
+        "position": "Research Assistant",
+        "start": "Jun 2020",
+        "end": "Jun 2021",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "geisel"
+    },
+    {
+        "company": "Dartmouth College",
+        "position": "Teaching Assistant",
+        "start": "Sep 2020",
+        "end": "Mar 2021",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "dartmouth"
+    },
+    {
+        "company": "Dartmouth College Academic Skills Center",
+        "position": "Peer Tutor",
+        "start": "Apr 2019",
+        "end": "Jun 2020",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "logo": "asc"
+    }
+]
