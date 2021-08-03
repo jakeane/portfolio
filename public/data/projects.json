@@ -2,21 +2,53 @@
     {
         "name": "BetMate",
         "description": "A platform to spectate and wager on chess matches",
+        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "start": "Mar 2021",
+        "end": "Present",
+        "tools": ["TypeScript", "Express", "MongoDB", "AWS Lambda"],
+        "deliverables": {
+            "Frontend GitHub": "https://github.com/dali-lab/betmate-frontend",
+            "Website": "https://betmate-prod.netlify.app/"
+        },
         "clay": "betmate"
     },
     {
         "name": "Therabot",
         "description": "A chatbot trained to be a mental health therapist",
+        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "start": "Jun 2020",
+        "end": "Jun 2021",
+        "tools": ["Python", "Flutter", "TensorFlow", "AWS ECS"],
+        "deliverables": {
+            "Flutter GitHub": "https://github.com/jakeane/therabot",
+            "Emotion API GitHub": "https://github.com/jakeane/emotion_api"
+        },
         "clay": "therabot"
     },
     {
         "name": "Whiteboard",
         "description": "The mobile counterpart to a productivity platform",
+        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "start": "Jan 2021",
+        "end": "Mar 2021",
+        "tools": ["JavaScript", "React Native", "Redux", "Firebase"],
+        "deliverables": {
+            "Website Beta": "https://app.whiteboardbeta.com/"
+        },
         "clay": "whiteboard"
     },
     {
         "name": "Boboddy",
         "description": "An acronym generator built around the Viterbi algorithm",
+        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "start": "Mar 2020",
+        "end": "Dec 2020",
+        "tools": ["TypeScript", "Angular", "C#", ".NET"],
+        "deliverables": {
+            "Frontend GitHub": "https://github.com/jakeane/boboddy_v2",
+            "Backend GitHub": "https://github.com/jakeane/boboddy_v2_api",
+            "Website": "https://boboddy.net/"
+        },
         "clay": "boboddy"
     }
 ]

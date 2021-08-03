@@ -1,13 +1,6 @@
-export interface ExperienceItem {
-  company: string
-  position: string
-  start: string
-  end: string
-  description: string
-  logo: string
-}
+import experience from 'public/data/experience.json';
+import projects from 'public/data/projects.json';
 
-export interface Project {
-  name: string
-  description: string
-}
+export type ExperienceItem = typeof experience[0];
+
+export type ProjectItem = typeof projects[0];
