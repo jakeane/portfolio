@@ -5,8 +5,19 @@ import AngledCorner from 'components/utils/AngledCorner';
 
 import projects from 'public/data/projects.json';
 import rightArrow from 'public/icons/right_arrow.svg';
+import betmate from 'public/clays/betmate.png';
+import therabot from 'public/clays/therabot.png';
+import whiteboard from 'public/clays/whiteboard.png';
+import boboddy from 'public/clays/boboddy.png';
 
 import styles from 'styles/Projects.module.css';
+
+const CLAYS: Record<string, any> = {
+  betmate,
+  therabot,
+  whiteboard,
+  boboddy,
+};
 
 const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
@@ -18,19 +29,8 @@ const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) =
           width={!i ? 50 : 45}
         >
           <div className={`${i % 2 ? styles.card_left : styles.card_right} ${i === 0 ? styles.head_proj : ''}`}>
-            <div
-              style={
-                i % 2
-                  ? { marginLeft: -p.clay.width / 2 }
-                  : { marginRight: -p.clay.width / 2 }
-              }
-            >
-              <Image
-                src={`/clays/${p.clay.file}.png`}
-                alt={p.clay.file}
-                width={p.clay.width}
-                height={p.clay.height}
-              />
+            <div className={styles[p.clay]}>
+              <Image src={CLAYS[p.clay]} alt={p.clay} />
             </div>
             <div className={`${i % 2 ? styles.data_left : styles.data_right}`}>
               <h3 className={styles.name}>{p.name}</h3>

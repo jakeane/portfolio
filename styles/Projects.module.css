@@ -2,8 +2,6 @@
     margin-left: 20vw;
 }
 
-
-
 .tail_proj {
     margin-left: 5vw;
 }
@@ -72,4 +70,28 @@
     padding: 0;
     font-size: 20px;
     text-decoration: underline;
+}
+
+.betmate {
+    margin-right: -150px;
+    width: 300px;
+    height: 202.85px;
+}
+
+.therabot {
+    margin-left: -70.465px;
+    width: 140.93px;
+    height: 300px;
+}
+
+.whiteboard {
+    margin-right: -74.265px;
+    width: 148.53px;
+    height: 300px;
+}
+
+.boboddy {
+    margin-left: -150px;
+    width: 300px;
+    height: 235.53px;
 }
