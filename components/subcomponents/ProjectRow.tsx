@@ -37,7 +37,7 @@ const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
           <Image src={CLAYS[project.clay]} alt={project.clay} />
         </div>
         <div className={`${i % 2 ? styles.data_left : styles.data_right}`}>
-          <h3 className={styles.name}>{project.name}</h3>
+          <h2>{project.name}</h2>
           <p className={styles.description}>{project.description}</p>
           <div className={styles.learn_more} onClick={() => handleLearnMore(project)}>
             <p className={styles.lm_text}>Learn more</p>

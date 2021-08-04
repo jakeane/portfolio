@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import ReactDOM from 'react-dom';
 import Image from 'next/image';
 import { ProjectItem } from 'types/json';
 
@@ -35,7 +36,7 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
     if (modalRef.current?.contains(e.target as Node)) return;
     handleExitClick();
   };
-  return (
+  return ReactDOM.createPortal(
     <div className={styles.modal_background} onClick={handleOutsideClick}>
       <div className={styles.modal} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
@@ -44,18 +45,18 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
         <h2 className={styles.modal_title}>{project.name}</h2>
         <div className={styles.modal_summary}>
           <div className={styles.modal_sumitem}>
-            <h3 className={styles.modal_sumtitle}>Timeline</h3>
-            <p className={styles.modal_sumdata}>{project.start} -</p>
-            <p className={styles.modal_sumdata}>{project.end}</p>
+            <h4>Timeline</h4>
+            <p>{project.start} -</p>
+            <p>{project.end}</p>
           </div>
           <div className={styles.modal_sumitem}>
-            <h3 className={styles.modal_sumtitle}>Tools</h3>
+            <h4>Tools</h4>
             {project.tools.map((t) => (
-              <p key={t} className={styles.modal_sumdata}>{t}</p>
+              <p key={t}>{t}</p>
             ))}
           </div>
           <div>
-            <h3 className={styles.modal_sumtitle}>Deliverables</h3>
+            <h4>Deliverables</h4>
             {Object.entries(project.deliverables).map(([name, link]) => (
               <a
                 className={styles.modal_anchor}
@@ -64,7 +65,7 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <p className={`${styles.modal_sumdata} ${styles.modal_link}`}>
+                <p className={styles.modal_link}>
                   {name}
                 </p>
                 <Image src={newtab} alt='new tab' />
@@ -79,7 +80,8 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
           <p className={styles.modal_explanation}>{project.explanation}</p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal') as HTMLElement,
   );
 };
 

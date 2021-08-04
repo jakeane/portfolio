@@ -16,7 +16,7 @@ const Contact: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) =>
   <div className={styles.main} ref={ref}>
     <AngledCorner width={60} height={60}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Get in touch</h2>
+        <h2>Get in touch</h2>
         <div className={styles.links}>
           <a className={styles.anchor} href={GITHUB} target='_blank' rel='noreferrer'>
             <Image src={github} alt='github' />

@@ -11,7 +11,7 @@ const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, r
   <div className={styles.main} ref={ref}>
     <div className={styles.leftpad} />
     <AngledCorner width={60} height={60} right>
-      <h1 className={styles.name}>John Keane</h1>
+      <h1>John Keane</h1>
       <p className={styles.subname}>(You can call me Jack)</p>
       <h2 className={styles.declaration}>Seeking full-time software engineering roles</h2>
       <div className={styles.arrow} onClick={() => props.scrollTo('Experience')}/>
