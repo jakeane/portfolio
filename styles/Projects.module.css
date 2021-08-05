@@ -106,10 +106,10 @@
     color: black;
     top: 50%;
     left: 50%;
-    width: 60vw;
-    height: 55vh;
-    margin-top: -27.5vh;
-    margin-left: -30vw;
+    width: 65vw;
+    min-width: 700px;
+    height: 60vh;
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
@@ -157,5 +157,5 @@
 }
 
 .modal_explanation {
-    width: 20vw;
+    width: 400px;
 }

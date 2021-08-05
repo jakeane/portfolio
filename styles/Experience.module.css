@@ -1,5 +1,5 @@
 .main {
-    margin-left: 20vw;
+    padding-left: 20vw;
 }
 
 .container {
@@ -52,6 +52,7 @@
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 50;
 }
 
 
@@ -63,9 +64,9 @@
     top: 50%;
     left: 50%;
     width: 60vw;
+    min-width: 650px;
     height: 40vh;
-    margin-top: -20vh;
-    margin-left: -30vw;
+    transform: translate(-50%, -50%);
 
     display: flex;
     justify-content: space-around;
@@ -80,7 +81,7 @@
 }
 
 .modal_headers {
-    width: 328px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,6 +98,10 @@
 }
 
 .modal_description {
-    width: 328px;
-    padding: 20px;
+    width: 350px;
+    /* padding: 20px; */
+}
+
+.statement {
+    padding: 0.5em;
 }

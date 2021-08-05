@@ -2,10 +2,10 @@
     {
         "name": "BetMate",
         "description": "A platform to spectate and wager on chess matches",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "explanation": "BetMate is a product built in the DALI Lab, and it is aimed to improve engagement for chess by introducing the element of gambling virtual coins. I architected the backend server with TypeScript, Express, Socket.IO, and MongoDB to broadcast chess matches and manage wagers. I also set up some Python microservices on AWS Lambda, which hosted machine learning models to determine betting odds.",
         "start": "Mar 2021",
         "end": "Present",
-        "tools": ["TypeScript", "Express", "MongoDB", "AWS Lambda"],
+        "tools": ["TypeScript", "Express", "Socket.IO", "MongoDB", "AWS Lambda"],
         "deliverables": {
             "Frontend GitHub": "https://github.com/dali-lab/betmate-frontend",
             "Website": "https://betmate-prod.netlify.app/"
@@ -15,7 +15,7 @@
     {
         "name": "Therabot",
         "description": "A chatbot trained to be a mental health therapist",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "explanation": "Therabot is a research project in the Geisel School of Medicine to build a chatbot to treat anxiety and depressive disorder. The ultimate goal of this chatbot is to lower access barriers for treating mental health. I built the mobile application using Flutter. I also developed a workflow to curate training data, train the chatbot on high performance computing clusters, and deploy the chatbot on AWS.",
         "start": "Jun 2020",
         "end": "Jun 2021",
         "tools": ["Python", "Flutter", "TensorFlow", "AWS ECS"],
@@ -26,24 +26,25 @@
         "clay": "therabot"
     },
     {
-        "name": "Whiteboard",
+        "name": "whiteboard",
         "description": "The mobile counterpart to a productivity platform",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "explanation": "whiteboard is a productivity application built in the DALI Lab, and it's goal is to provide many productivity features such as project planning, to-do lists, calendars, and more. The mobile application aimed to be a supplement to the web platform. I developed an interactive calendar with JavaScript and React Native with views for multiple timeframes as well as drag-and-drop event modification.",
         "start": "Jan 2021",
         "end": "Mar 2021",
         "tools": ["JavaScript", "React Native", "Redux", "Firebase"],
         "deliverables": {
-            "Website Beta": "https://app.whiteboardbeta.com/"
+            "Website Beta": "https://app.whiteboardbeta.com/",
+            "remember": "What is this? Why am I here? What it achieve?"
         },
         "clay": "whiteboard"
     },
     {
         "name": "Boboddy",
         "description": "An acronym generator built around the Viterbi algorithm",
-        "explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id quam id leo finibus auctor a nec nulla. Nunc convallis ipsum a lacus molestie aliquet. Quisque id nulla nec nulla ultricies mattis. Praesent diam tortor, fermentum eu velit sed, venenatis.",
+        "explanation": "Boboddy is an acronym generator I built during my free time. The generation algorithm is derived from the Viterbi algorithm, which takes in a sequence of observations and returns the most probable sequence of \"hidden\" states. The text processing and probability models were developed using Python and NLTK, and the app was deployed using ASP.NET to run the algorithm and Angular to display the UI.",
         "start": "Mar 2020",
         "end": "Dec 2020",
-        "tools": ["TypeScript", "Angular", "C#", ".NET"],
+        "tools": ["C#", "TypeScript", "Angular", "Python"],
         "deliverables": {
             "Frontend GitHub": "https://github.com/jakeane/boboddy_v2",
             "Backend GitHub": "https://github.com/jakeane/boboddy_v2_api",

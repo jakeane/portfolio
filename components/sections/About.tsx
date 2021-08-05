@@ -16,9 +16,13 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
         <div className={styles.text_container}>
           <h2 className={styles.title}>About me</h2>
           <p className={styles.body}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus semper odio, sit amet consequat arcu accumsan tincidunt. Etiam eu elit in arcu feugiat convallis.
+            I am a senior at Dartmouth College majoring in Computer Science and minoring in Quantitative Social Sciences.
+            My interests are strongest in artificial intelligence and full-stack web development, especially where the two areas intersect.
           </p>
-          <p className={styles.body}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac turpis diam. Quisque iaculis sed.</p>
+          <p className={styles.body}>
+            Ask me about the time I broke both of my hands within 3 days, or when I broke my leg, or one of the 5 times I broke my wrist...
+            I hope software engineering is a much safer activity.
+          </p>
         </div>
       </div>
     </AngledCorner>

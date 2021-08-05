@@ -49,7 +49,9 @@ const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
           <p className={styles.modal_time}>{experience.start} - {experience.end}</p>
         </div>
         <div className={styles.modal_description}>
-          <p>{experience.description}</p>
+          {experience.description.split('. ').map((d, i) => (
+            <p key={i} className={styles.statement}>{d}</p>
+          ))}
         </div>
       </div>
     </div>,

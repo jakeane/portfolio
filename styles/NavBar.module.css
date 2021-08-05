@@ -6,6 +6,7 @@
     margin-top: auto; 
     margin-bottom: auto; 
     height: 100px;
+    z-index: 10;
   }
 
 .container {
@@ -22,12 +23,10 @@
 
 .current_container {
     opacity: 1;
-    /* font-weight: bold; */
 }
 
 .container:hover {
     opacity: 1;
-    /* font-weight: bold; */
 }
 
 .name {

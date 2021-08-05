@@ -4,7 +4,7 @@
         "position": "Software Engineer",
         "start": "Jan 2021",
         "end": "Present",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Collaborated with 5-6 person teams of developers, designers, and project managers to design and build full-stack projects for startups. Mentored new DALI developers to help them master technologies such as TypeScript, React, Express, and MongoDB.",
         "logo": "dali"
     },
     {
@@ -12,7 +12,7 @@
         "position": "Software Engineer Intern",
         "start": "Jun 2021",
         "end": "Aug 2021",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Worked with the Global Technology and Operations line of business to improve enrollment workflows for investment solutions. Developed a C# program to automate the generation and distribution of an enrollment failure report, which occurred twice daily, saving 10 hours of manual work each week.",
         "logo": "bofa"
     },
     {
@@ -20,7 +20,7 @@
         "position": "Research Assistant",
         "start": "Mar 2021",
         "end": "Jun 2021",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Collaborated with a professor to design a new course in the computer science department for reinforcement learning. Designed assignments and projects aimed to help students build intuition about various reinforcement learning concepts and algorithms.",
         "logo": "dartmouth"
     },
     {
@@ -28,7 +28,7 @@
         "position": "Research Assistant",
         "start": "Jun 2020",
         "end": "Jun 2021",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Performed research focused on the development and testing of a chatbot to treat anxiety and depressive disorder, which is aimed to lower access barriers for treating mental health. Architected the application infrastructure, and spearheaded the training of the chatbot.",
         "logo": "geisel"
     },
     {
@@ -36,7 +36,7 @@
         "position": "Teaching Assistant",
         "start": "Sep 2020",
         "end": "Mar 2021",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Assisted in a machine learning course for 60 graduate and undergraduate students. Administered office hour sessions to guide them through assignments revolving around basic machine learning algorithms for classification, regression, and clustering.",
         "logo": "dartmouth"
     },
     {
@@ -44,7 +44,7 @@
         "position": "Peer Tutor",
         "start": "Apr 2019",
         "end": "Jun 2020",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis dolor, rhoncus vel volutpat at, aliquet quis elit. Maecenas consequat mauris et justo egestas lobortis. Ut vulputate eu diam in facilisis. Cras dapibus luctus cursus.",
+        "description": "Worked individually with students to assist them through an introductory statistics course. Clarified key concepts such as probabilities and regressions with examples in order to form a better understanding of the material.",
         "logo": "asc"
     }
 ]
