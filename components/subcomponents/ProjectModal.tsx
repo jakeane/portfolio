@@ -44,7 +44,7 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
         </div>
         <h2 className={styles.modal_title}>{project.name}</h2>
         <div className={styles.modal_summary}>
-          <div className={styles.modal_sumitem}>
+          <div className={`${styles.modal_sumitem} ${styles.timeline}`}>
             <h4>Timeline</h4>
             <p>{project.start} -</p>
             <p>{project.end}</p>
@@ -55,7 +55,7 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
               <p key={t}>{t}</p>
             ))}
           </div>
-          <div className={styles.modal_sumitem}>
+          <div className={`${styles.modal_sumitem} ${styles.deliverables}`}>
             <h4>Deliverables</h4>
             {Object.entries(project.deliverables).map(([name, link]) => (
               <a

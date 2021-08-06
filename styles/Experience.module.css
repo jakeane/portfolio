@@ -127,13 +127,21 @@
         width: auto;
         min-width: 0px;
         max-height: 90vh;
-        padding: 36px;
+        padding: 18px;
+    }
+
+    .modal_headers {
+        margin-bottom: 18px;
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 520px) {
     .modal_headers, .modal_description {
-        width: 70vw;
+        width: 80vw;
         overflow: scroll;
     }
+
+    /* .statement {
+        font-size: 16px;
+    } */
 }
