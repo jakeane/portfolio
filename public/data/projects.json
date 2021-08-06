@@ -20,7 +20,7 @@
         "end": "Jun 2021",
         "tools": ["Python", "Flutter", "TensorFlow", "AWS ECS"],
         "deliverables": {
-            "Flutter GitHub": "https://github.com/jakeane/therabot",
+            "App GitHub": "https://github.com/jakeane/therabot",
             "Emotion API GitHub": "https://github.com/jakeane/emotion_api"
         },
         "clay": "therabot"
@@ -33,8 +33,7 @@
         "end": "Mar 2021",
         "tools": ["JavaScript", "React Native", "Redux", "Firebase"],
         "deliverables": {
-            "Website Beta": "https://app.whiteboardbeta.com/",
-            "remember": "What is this? Why am I here? What it achieve?"
+            "Website Beta": "https://app.whiteboardbeta.com/"
         },
         "clay": "whiteboard"
     },

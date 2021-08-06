@@ -271,22 +271,16 @@
     }
 
     .modal {
-        width: 90vw;
+        width: 95vw;
         height: auto;
         max-height: 95vh;
-        min-width: 90vw;
+        min-width: 95vw;
         padding-top: 18px;
         padding-bottom: 36px;
     }
 
     .modal_title {
-        margin-top: -18px;
-        margin-bottom: -30px;
-    }
-
-    .modal_sumitem {
-        display: none;
-        padding: 18px;
+        margin-bottom: 0.5em;
     }
 
     .tools {
@@ -297,10 +291,13 @@
         padding: 1em;
     }
 
+    .timeline {
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
     .modal {
         height: 80vh;
     }
-}
+} */
