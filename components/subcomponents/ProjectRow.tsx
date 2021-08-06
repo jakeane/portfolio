@@ -29,8 +29,7 @@ const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
   <div key={project.name} className={i > 0 ? styles.tail_proj : undefined}>
     <AngledCorner
       right={!(i % 2)}
-      height={60}
-      width={!i ? 50 : 45}
+      styling={!i ? styles.ac_head : styles.ac_tail}
     >
       <div className={`${i % 2 ? styles.card_left : styles.card_right} ${i === 0 ? styles.head_proj : ''}`}>
         <div className={styles[project.clay]}>

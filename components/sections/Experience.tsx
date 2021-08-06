@@ -26,7 +26,7 @@ const Experience: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref)
           setShowModal={setShowModal}
         />
       )}
-      <AngledCorner width={60}>
+      <AngledCorner styling={styles.angled_corner}>
         <div className={styles.container}>
           {experience.map((e) => (
             <ExperienceCard

@@ -2,6 +2,16 @@
     margin-left: 20vw;
 }
 
+.ac_head {
+    height: 60vh;
+    width: 50vh;
+}
+
+.ac_tail {
+    height: 60vh;
+    width: 45vh;
+}
+
 .tail_proj {
     margin-left: 5vw;
 }
@@ -31,20 +41,14 @@
     flex-direction: column;
     align-items: flex-end;
     text-align: end;
-    width: 350px;
+    width: 325px;
 }
 
 .data_right {
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 325px;
 }
-
-.clay_left {
-    margin-left: -100px;
-}
-
-
 
 .description {
     color: #c4c4c4;
@@ -158,4 +162,37 @@
 
 .modal_explanation {
     width: 400px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        margin-left: 0;
+    }
+
+    .ac_head, .ac_tail {
+        width: 100vw;
+    }
+
+
+    .head_proj {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .tail_proj {
+        margin-left: 0;
+    }
+
+    .card_left, .card_right {
+        width: 75vw;
+    }
+
+    .betmate, .whiteboard {
+        margin-right: 0;
+    }
+    
+    .therabot, .boboddy {
+        margin-left: 0;
+    }
+
 }

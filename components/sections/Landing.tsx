@@ -10,7 +10,7 @@ interface Props {
 const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, ref) => (
   <div className={styles.main} ref={ref}>
     <div className={styles.leftpad} />
-    <AngledCorner width={60} height={60} right>
+    <AngledCorner styling={styles.angled_corner} right>
       <h1>John Keane</h1>
       <p className={styles.subname}>(You can call me Jack)</p>
       <h2 className={styles.declaration}>Seeking full-time software engineering roles</h2>

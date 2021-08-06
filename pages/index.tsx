@@ -15,8 +15,12 @@ const SECTIONS = ['Home', 'Experience', 'Projects', 'About', 'Links'];
 const Home: React.FC = () => {
   const navRefs = useRef<(HTMLDivElement | null)[]>(Array(5).fill(null));
   const [closestSection, setClosestSection] = useState(0);
+  const [navBarOpen, setNavBarOpen] = useState(false);
 
   const scrollTo = (s: string) => {
+    setNavBarOpen(false);
+    document.body.style.overflow = 'unset';
+
     const i = SECTIONS.indexOf(s);
     const el = navRefs.current[i];
     if (!el) return;
@@ -57,7 +61,12 @@ const Home: React.FC = () => {
       </Head>
 
       <main className={styles.main}>
-        <NavBar scrollTo={scrollTo} closestSection={closestSection} />
+        <NavBar
+          scrollTo={scrollTo}
+          closestSection={closestSection}
+          open={navBarOpen}
+          setOpen={setNavBarOpen}
+        />
         <Heading />
 
         <Landing ref={(el) => { navRefs.current[0] = el; }} scrollTo={scrollTo} />

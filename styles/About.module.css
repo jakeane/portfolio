@@ -2,9 +2,15 @@
     margin-left: 24.95vw;
 }
 
+.angled_corner {
+    width: 55vw;
+    height: 60vw;
+}
+
 .container {
     display: flex;
-    width: 100%;
+    width: calc(100% + 7.5vw);
+    margin-left: -7.5vw;
     justify-content: space-around;
     align-items: center;
 }
@@ -19,7 +25,8 @@
 }
 
 .text_container {
-    width: 400px;
+    width: 35vw;
+    max-width: 450px;
 }
 
 .title {
@@ -31,4 +38,19 @@
     color: #c4c4c4;
     margin-top: 9px;
     margin-bottom: 9px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        margin-left: 0;
+    }
+
+    .angled_corner {
+        width: 100vw;
+    }
+
+    .container {
+        width: 70vw;
+        margin-left: 0;
+    }
 }

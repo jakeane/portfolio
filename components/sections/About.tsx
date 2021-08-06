@@ -8,7 +8,7 @@ import profile from 'public/images/jackkeane.jpg';
 
 const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
-    <AngledCorner right width={55} height={60}>
+    <AngledCorner styling={styles.angled_corner} right>
       <div className={styles.container}>
         <div className={styles.img_container}>
           <Image src={profile} alt='profile' className={styles.img} />
@@ -20,8 +20,7 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
             My interests are strongest in artificial intelligence and full-stack web development, especially where the two areas intersect.
           </p>
           <p className={styles.body}>
-            Ask me about the time I broke both of my hands within 3 days, or when I broke my leg, or one of the 5 times I broke my wrist...
-            I hope software engineering is a much safer activity.
+            Ask me about the time I broke both of my hands within 3 days, or when I broke my leg, or one of the 5 times I broke my wrist.
           </p>
         </div>
       </div>

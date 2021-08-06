@@ -2,6 +2,10 @@
     padding-left: 20vw;
 }
 
+.angled_corner {
+    width: 60vw;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -104,4 +108,14 @@
 
 .statement {
     padding: 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        padding-left: 0;
+    }
+
+    .angled_corner {
+        width: 100vw;
+    }
 }

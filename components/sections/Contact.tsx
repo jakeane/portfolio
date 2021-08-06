@@ -14,7 +14,7 @@ const LINKEDIN = 'https://www.linkedin.com/in/jack-keane-co/';
 
 const Contact: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
-    <AngledCorner width={60} height={60}>
+    <AngledCorner styling={styles.angled_corner}>
       <div className={styles.container}>
         <h2>Get in touch</h2>
         <div className={styles.links}>
