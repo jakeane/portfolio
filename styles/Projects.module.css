@@ -164,6 +164,10 @@
     width: 400px;
 }
 
+.icon {
+    display: none;
+}
+
 @media only screen and (max-width: 1000px) {
     .main {
         margin-left: 0;
@@ -171,6 +175,10 @@
 
     .ac_head, .ac_tail {
         width: 100vw;
+    }
+
+    .data_left, .data_right {
+        width: 32vw;
     }
 
 
@@ -190,9 +198,48 @@
     .betmate, .whiteboard {
         margin-right: 0;
     }
-    
+
     .therabot, .boboddy {
         margin-left: 0;
     }
 
+}
+
+@media only screen and (max-width: 720px) {
+    .betmate {
+        width: 200px;
+        height: 135.23px;
+    }
+
+    .boboddy {
+        width: 200px;
+        height: 157.02px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .betmate, .therabot, .whiteboard, .boboddy {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+        width: 128px;
+        height: 128px;
+        margin-bottom: 10px;
+    }
+
+    .data_left, .data_right {
+        align-items: center;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .description {
+        margin-top: 2px;
+    }
+
+    .card_left, .card_right {
+        justify-content: center;
+    }
 }

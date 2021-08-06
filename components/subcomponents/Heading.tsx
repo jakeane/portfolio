@@ -27,7 +27,7 @@ const Heading: React.FC = () => (
       <a className={styles.anchor} href='mailto:john.f.keane.22@dartmouth.edu'>
         <Image src={mail} alt='mail' />
       </a>
-      <a href='/jkeane_resume.pdf' target='_blank'>
+      <a href='/documents/jkeane_resume.pdf' target='_blank'>
         <div className={styles.resume}>
           <p className={styles.resume_text}>RESUME</p>
           <Image src={newTab} alt='newTab' />

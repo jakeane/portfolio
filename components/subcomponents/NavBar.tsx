@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import styles from 'styles/NavBar.module.css';
+import Links from './Links';
 import NavItem from './NavItem';
 
 interface Props {
@@ -22,6 +23,10 @@ const NavBar: React.FC<Props> = (props) => (
           current={i === props.closestSection}
         />
       ))}
+      <div className={styles.links}>
+        <div className={styles.bar} />
+        <Links />
+      </div>
     </div>
     <div className={styles.hamburger}>
       <input

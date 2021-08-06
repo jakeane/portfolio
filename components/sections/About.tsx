@@ -20,7 +20,7 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
             My interests are strongest in artificial intelligence and full-stack web development, especially where the two areas intersect.
           </p>
           <p className={styles.body}>
-            Ask me about the time I broke both of my hands within 3 days, or when I broke my leg, or one of the 5 times I broke my wrist.
+            Ask me about the time I broke both of my hands, or the time I broke my leg, or one of the five times I broke my wrist.
           </p>
         </div>
       </div>
