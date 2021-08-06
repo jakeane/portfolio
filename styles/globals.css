@@ -14,8 +14,33 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 72px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {

@@ -1,5 +1,9 @@
 .main {
-    margin-left: 20vw;
+    padding-left: 20vw;
+}
+
+.angled_corner {
+    width: 60vw;
 }
 
 .container {
@@ -10,12 +14,13 @@
 }
 
 .card {
-    width: 328px;
+    width: 360px;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .img {
@@ -26,33 +31,21 @@
 }
 
 .position {
-    font-weight: normal;
-    font-size: 26px;
-    margin: 0;
-    padding: 0;
     margin-top: 5px;
-    text-align: center;
 }
 
 .time {
-    font-size: 16px;
     color: #c4c4c4;
-    margin: 0;
-    padding: 0;
     margin-top: 5px;
 }
 
 .learn_more {
     display: flex;
-    color: white;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 .lm_text {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
     text-decoration: underline;
 }
 
@@ -66,6 +59,7 @@
     z-index: 50;
 }
 
+
 .modal {
     position: fixed;
     background-color: white;
@@ -74,9 +68,9 @@
     top: 50%;
     left: 50%;
     width: 60vw;
+    min-width: 650px;
     height: 40vh;
-    margin-top: -20vh;
-    margin-left: -30vw;
+    transform: translate(-50%, -50%);
 
     display: flex;
     justify-content: space-around;
@@ -84,38 +78,62 @@
 }
 
 .x {
-    position: absolute;
+    position: fixed;
     top: 4px;
     right: 4px;
     cursor: pointer;
 }
 
 .modal_headers {
-    width: 328px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .modal_position {
-    font-weight: normal;
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
     margin-top: 5px;
     text-align: center;
 }
 
 .modal_time {
-    font-size: 20px;
     color: #333333;
-    margin: 0;
-    padding: 0;
     margin-top: 5px;
 }
 
 .modal_description {
-    width: 328px;
-    padding: 20px;
-    font-size: 20px;
+    width: 350px;
+    /* padding: 20px; */
+}
+
+.statement {
+    padding: 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        padding-left: 0;
+    }
+
+    .angled_corner {
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .modal {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        min-width: 0px;
+        max-height: 90vh;
+        padding: 36px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .modal_headers, .modal_description {
+        width: 70vw;
+        overflow: scroll;
+    }
 }

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import ReactDOM from 'react-dom';
 import Image from 'next/image';
 
 import dali from 'public/icons/dali_black.svg';
@@ -36,7 +37,7 @@ const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
     handleExitClick();
   };
 
-  return (
+  return ReactDOM.createPortal(
     <div className={styles.modal_background} onClick={handleOutsideClick}>
       <div className={styles.modal} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
@@ -48,10 +49,13 @@ const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
           <p className={styles.modal_time}>{experience.start} - {experience.end}</p>
         </div>
         <div className={styles.modal_description}>
-          <p>{experience.description}</p>
+          {experience.description.split('. ').map((d, i) => (
+            <p key={i} className={styles.statement}>{d}</p>
+          ))}
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal') as HTMLElement,
   );
 };
 

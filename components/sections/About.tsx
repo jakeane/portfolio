@@ -8,7 +8,7 @@ import profile from 'public/images/jackkeane.jpg';
 
 const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
-    <AngledCorner right width={55} height={60}>
+    <AngledCorner styling={styles.angled_corner} right>
       <div className={styles.container}>
         <div className={styles.img_container}>
           <Image src={profile} alt='profile' className={styles.img} />
@@ -16,9 +16,12 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
         <div className={styles.text_container}>
           <h2 className={styles.title}>About me</h2>
           <p className={styles.body}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus semper odio, sit amet consequat arcu accumsan tincidunt. Etiam eu elit in arcu feugiat convallis.
+            I am a senior at Dartmouth College majoring in Computer Science and minoring in Quantitative Social Sciences.
+            My interests are strongest in artificial intelligence and full-stack web development, especially where the two areas intersect.
           </p>
-          <p className={styles.body}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac turpis diam. Quisque iaculis sed.</p>
+          <p className={styles.body}>
+            Ask me about the time I broke both of my hands, or the time I broke my leg, or one of the five times I broke my wrist.
+          </p>
         </div>
       </div>
     </AngledCorner>
