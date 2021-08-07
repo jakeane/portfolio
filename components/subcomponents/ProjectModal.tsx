@@ -38,8 +38,8 @@ const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) =>
   };
 
   return (
-    <div className={styles.modal_background} onClick={handleOutsideClick} style={current ? undefined : { display: 'none' }}>
-      <div className={styles.modal} ref={modalRef}>
+    <div className={`${styles.modal_background} ${current ? styles.background_show : styles.background_hide}`} onClick={handleOutsideClick}>
+      <div className={`${styles.modal} ${current ? styles.modal_show : styles.modal_hide}`} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
           <Image src={x} alt='x' />
         </div>

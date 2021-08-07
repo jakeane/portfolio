@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   overflow-y: scroll;
+
+  /* opacity: 0; */
 }
 
 .exp_transition {
