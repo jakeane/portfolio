@@ -8,6 +8,7 @@
 .angled_corner {
   width: 60vw;
   height: 60vh;
+  min-height: 400px;
 }
 
 .leftpad {

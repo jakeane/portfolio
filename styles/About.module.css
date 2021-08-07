@@ -1,10 +1,11 @@
 .main {
-    margin-left: 24.95vw;
+    margin-left: 25vw;
 }
 
 .angled_corner {
     width: 55vw;
     height: 70vh;
+    min-height: 400px;
     padding-bottom: 50px;
 }
 
@@ -40,6 +41,20 @@
     color: #c4c4c4;
     margin-top: 9px;
     margin-bottom: 9px;
+}
+
+@media only screen and (min-width: 2000px) {
+    .main {
+        margin-left: 35vw;
+    }
+
+    .angled_corner {
+        width: 45vw;
+    }
+
+    .container {
+        margin-left: -17.5vw;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
