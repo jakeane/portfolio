@@ -1,16 +1,17 @@
 import Head from 'next/head';
-
-import Landing from 'components/sections/Landing';
-import Experience from 'components/sections/Experience';
-import Projects from 'components/sections/Projects';
-import About from 'components/sections/About';
-import Contact from 'components/sections/Contact';
-import NavBar from 'components/subcomponents/NavBar';
-import Heading from 'components/subcomponents/Heading';
-import styles from 'styles/Home.module.css';
 import { useEffect, useRef, useState } from 'react';
 
-const SECTIONS = ['Home', 'Experience', 'Projects', 'About', 'Links'];
+import {
+  About,
+  Contact,
+  Experience,
+  Landing,
+  Projects,
+} from 'components/sections';
+import { NavBar, Heading } from 'components/subcomponents';
+import { SECTIONS } from 'utils/constants';
+
+import styles from 'styles/Home.module.css';
 
 const Home: React.FC = () => {
   const navRefs = useRef<(HTMLDivElement | null)[]>(Array(5).fill(null));
@@ -65,7 +66,6 @@ const Home: React.FC = () => {
         <div className={styles.exp_transition}/>
         <Experience ref={(el) => { navRefs.current[1] = el; }} />
         <Projects ref={(el) => { navRefs.current[2] = el; }} />
-        {/* <div className={styles.about_transition} /> */}
         <About ref={(el) => { navRefs.current[3] = el; }} />
         <Contact ref={(el) => { navRefs.current[4] = el; }} />
       </main>

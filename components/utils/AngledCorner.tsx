@@ -1,9 +1,7 @@
 import styles from 'styles/AngledCorner.module.css';
 
 interface Props {
-  // width: number
   styling: string
-  // height?: number
   right?: boolean
 }
 

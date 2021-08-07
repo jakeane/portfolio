@@ -1,22 +1,12 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import { ProjectItem } from 'types/json';
 
-import betmate from 'public/clays/betmate_black.png';
-import therabot from 'public/clays/therabot_black.png';
-import whiteboard from 'public/clays/whiteboard_black.png';
-import boboddy from 'public/clays/boboddy_black.png';
+import { ProjectItem } from 'types/json';
+import { CLAYS_BLACK } from 'utils/images';
 import x from 'public/icons/x.svg';
 import newtab from 'public/icons/open_in_new.svg';
 
 import styles from 'styles/Projects.module.css';
-
-const CLAYS: Record<string, any> = {
-  betmate,
-  therabot,
-  whiteboard,
-  boboddy,
-};
 
 interface Props {
   project: ProjectItem
@@ -76,7 +66,7 @@ const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) =>
         </div>
         <div className={styles.modal_content}>
           <div className={`${styles[project.clay]} ${styles.nomargin}`}>
-            <Image src={CLAYS[project.clay]} alt={project.clay} placeholder='blur' />
+            <Image src={CLAYS_BLACK[project.clay]} alt={project.clay} placeholder='blur' />
           </div>
           <p className={styles.modal_explanation}>{project.explanation}</p>
         </div>

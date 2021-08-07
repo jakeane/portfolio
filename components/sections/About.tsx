@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import AngledCorner from 'components/utils/AngledCorner';
+import { AngledCorner } from 'components/utils';
 import styles from 'styles/About.module.css';
 
 import profile from 'public/images/jackkeane.jpg';

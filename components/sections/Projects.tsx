@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
+import { ProjectRow, ProjectModal } from 'components/subcomponents';
+import { ProjectItem } from 'types/json';
 import projects from 'public/data/projects.json';
 
 import styles from 'styles/Projects.module.css';
-import { ProjectItem } from 'types/json';
-import ProjectRow from 'components/subcomponents/ProjectRow';
-import ProjectModal from 'components/subcomponents/ProjectModal';
 
 const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => {
   const [currentModal, setCurrentModal] = useState<string>('');
