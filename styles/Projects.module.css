@@ -4,15 +4,15 @@
 
 .ac_head {
     height: 60vh;
+    min-height: 400px;
     width: 50vw;
-    max-width: 750px;
 }
 
 .ac_tail {
     height: 60vh;
     width: 45vw;
+    min-height: 400px;
     display: flex;
-    max-width: 662px;
 }
 
 .tail_proj {
@@ -128,6 +128,7 @@
     min-width: 800px;
     max-width: 900px;
     height: 60vh;
+    max-height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -141,7 +142,7 @@
 }
 
 .modal_hide {
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, 70vh);
 }
 
 .x {
@@ -191,6 +192,22 @@
 
 .icon {
     display: none;
+}
+
+@media only screen and (min-width: 2000px) {
+    .ac_head {
+        width: 45vw;
+    }
+
+    .ac_tail {
+        margin-left: 10vw;
+        width: 30vw;
+    }
+
+    .head_proj {
+        margin-left: 15vw;
+        width: calc(100% - 15vw + 1px);
+    }
 }
 
 @media only screen and (max-width: 1000px) {

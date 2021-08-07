@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     const i = SECTIONS.indexOf(s);
     const el = navRefs.current[i];
     if (!el) return;
-    const offset = i === 0 ? 200 : 40;
+    const offset = i === 0 ? 200 : 100;
     const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
     const handleScroll = () => {
       const newClosest = navRefs.current
         .map((r) => r?.getBoundingClientRect().top ?? -10000)
-        .map((d) => (d > 250 ? -10000 : d))
+        .map((d) => (d > 400 ? -10000 : d))
         .reduce((best, curr, i, arr) => (arr[best] > curr ? best : i), 0);
 
       setClosestSection(newClosest);
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
         <div className={styles.exp_transition}/>
         <Experience ref={(el) => { navRefs.current[1] = el; }} />
         <Projects ref={(el) => { navRefs.current[2] = el; }} />
-        <div className={styles.about_transition} />
+        {/* <div className={styles.about_transition} /> */}
         <About ref={(el) => { navRefs.current[3] = el; }} />
         <Contact ref={(el) => { navRefs.current[4] = el; }} />
       </main>
