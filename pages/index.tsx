@@ -29,22 +29,14 @@ const Home: React.FC = () => {
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
-  const getClosestPoint = (r: HTMLDivElement | null, i: number) => {
-    const endOffset = i === 4 ? 200 : 40;
-    const rect = r?.getBoundingClientRect();
-    if (!rect) return 10000;
-    const { top, bottom } = rect;
-    return Math.min(Math.abs(top) - endOffset, Math.abs(bottom));
-  };
-
   useEffect(() => {
     const handleScroll = () => {
-      const closest = navRefs.current
-        .map((r, i) => ({ y: getClosestPoint(r, i), i }))
-        .reduce((best, curr) => (
-          best.y < curr.y ? best : curr
-        ));
-      setClosestSection(closest.i);
+      const newClosest = navRefs.current
+        .map((r) => r?.getBoundingClientRect().top ?? -10000)
+        .map((d) => (d > 250 ? -10000 : d))
+        .reduce((best, curr, i, arr) => (arr[best] > curr ? best : i), 0);
+
+      setClosestSection(newClosest);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -72,11 +64,9 @@ const Home: React.FC = () => {
         <Landing ref={(el) => { navRefs.current[0] = el; }} scrollTo={scrollTo} />
         <div className={styles.exp_transition}/>
         <Experience ref={(el) => { navRefs.current[1] = el; }} />
-        <div className={styles.proj_transition} />
         <Projects ref={(el) => { navRefs.current[2] = el; }} />
-        <div className={styles.about_transition}/>
+        <div className={styles.about_transition} />
         <About ref={(el) => { navRefs.current[3] = el; }} />
-        <div className={styles.contact_transition}/>
         <Contact ref={(el) => { navRefs.current[4] = el; }} />
       </main>
 

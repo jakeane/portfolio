@@ -11,7 +11,7 @@ import newtab from 'public/icons/open_in_new.svg';
 
 import styles from 'styles/Projects.module.css';
 
-const LOGOS: Record<string, any> = {
+const CLAYS: Record<string, any> = {
   betmate,
   therabot,
   whiteboard,
@@ -76,7 +76,7 @@ const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) =>
         </div>
         <div className={styles.modal_content}>
           <div className={`${styles[project.clay]} ${styles.nomargin}`}>
-            <Image src={LOGOS[project.clay]} alt={project.clay} />
+            <Image src={CLAYS[project.clay]} alt={project.clay} placeholder='blur' />
           </div>
           <p className={styles.modal_explanation}>{project.explanation}</p>
         </div>

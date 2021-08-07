@@ -47,11 +47,9 @@ const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
           <Image src={CLAYS[project.clay]} alt={project.clay} />
         </div>
         <div className={`${i % 2 ? styles.data_left : styles.data_right}`}>
-          {ICONS[project.clay] && (
-            <div className={styles.icon}>
-              <Image src={ICONS[project.clay]} alt={project.clay} />
-            </div>
-          )}
+          <div className={styles.icon}>
+            <Image src={ICONS[project.clay]} alt={project.clay} />
+          </div>
           <h2>{project.name}</h2>
           <p className={styles.description}>{project.description}</p>
           <div className={styles.learn_more} onClick={() => handleLearnMore(project)}>

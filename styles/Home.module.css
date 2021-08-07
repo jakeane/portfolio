@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   overflow-y: scroll;
-
-  /* opacity: 0; */
 }
 
 .exp_transition {
@@ -26,7 +24,7 @@
     border-left: 1px solid white;
     width: 60vw;
     height: 5vh;
-    margin-left: 25vw;
+    margin-left: 24.95vw;
 }
 
 .contact_transition {

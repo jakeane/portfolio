@@ -5,11 +5,14 @@
 .ac_head {
     height: 60vh;
     width: 50vw;
+    max-width: 750px;
 }
 
 .ac_tail {
     height: 60vh;
     width: 45vw;
+    display: flex;
+    max-width: 662px;
 }
 
 .tail_proj {
@@ -123,6 +126,7 @@
     left: 50%;
     width: 65vw;
     min-width: 800px;
+    max-width: 900px;
     height: 60vh;
 
     display: flex;
@@ -196,6 +200,7 @@
 
     .ac_head, .ac_tail {
         width: 100vw;
+        max-width: none;
     }
 
     .data_left, .data_right {
