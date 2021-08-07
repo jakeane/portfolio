@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
 import Image from 'next/image';
 import { ProjectItem } from 'types/json';
 
@@ -21,23 +20,25 @@ const LOGOS: Record<string, any> = {
 
 interface Props {
   project: ProjectItem
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
+  setCurrentModal: React.Dispatch<React.SetStateAction<string>>
+  current: boolean
 }
 
-const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
+const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleExitClick = () => {
     document.body.style.overflow = 'unset';
-    setShowModal(false);
+    setCurrentModal('');
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (modalRef.current?.contains(e.target as Node)) return;
     handleExitClick();
   };
-  return ReactDOM.createPortal(
-    <div className={styles.modal_background} onClick={handleOutsideClick}>
+
+  return (
+    <div className={styles.modal_background} onClick={handleOutsideClick} style={current ? undefined : { display: 'none' }}>
       <div className={styles.modal} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
           <Image src={x} alt='x' />
@@ -80,8 +81,7 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
           <p className={styles.modal_explanation}>{project.explanation}</p>
         </div>
       </div>
-    </div>,
-    document.getElementById('portal') as HTMLElement,
+    </div>
   );
 };
 

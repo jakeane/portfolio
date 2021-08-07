@@ -10,6 +10,7 @@ import boboddy from 'public/clays/boboddy.png';
 import betmateIcon from 'public/icons/betmate.png';
 import therabotIcon from 'public/icons/therabot.png';
 import whiteboardIcon from 'public/icons/whiteboard.png';
+import boboddyIcon from 'public/icons/boboddy.png';
 import rightArrow from 'public/icons/right_arrow.svg';
 
 import styles from 'styles/Projects.module.css';
@@ -25,6 +26,7 @@ const ICONS: Record<string, any> = {
   betmate: betmateIcon,
   therabot: therabotIcon,
   whiteboard: whiteboardIcon,
+  boboddy: boboddyIcon,
 };
 
 interface Props {

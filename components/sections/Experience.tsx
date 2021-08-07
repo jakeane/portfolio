@@ -9,23 +9,23 @@ import ExperienceCard from 'components/subcomponents/ExperienceCard';
 import ExperienceModal from 'components/subcomponents/ExperienceModal';
 
 const Experience: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => {
-  const [modalData, setModalData] = useState<ExperienceItem>(experience[0]);
-  const [showModal, setShowModal] = useState(false);
+  const [currentModal, setCurrentModal] = useState<string>('');
 
   const handleLearnMore = (e: ExperienceItem) => {
     document.body.style.overflow = 'hidden';
-    setModalData(e);
-    setShowModal(true);
+    setCurrentModal(`${e.company}-${e.position}`);
   };
 
   return (
     <div className={styles.main} ref={ref}>
-      {showModal && (
+      {experience.map((e) => (
         <ExperienceModal
-          experience={modalData}
-          setShowModal={setShowModal}
+          key={`${e.company}-${e.position}`}
+          experience={e}
+          current={`${e.company}-${e.position}` === currentModal}
+          setCurrentModal={setCurrentModal}
         />
-      )}
+      ))}
       <AngledCorner styling={styles.angled_corner}>
         <div className={styles.container}>
           {experience.map((e) => (

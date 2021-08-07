@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
 import Image from 'next/image';
 
 import dali from 'public/icons/dali_black.svg';
@@ -21,15 +20,16 @@ const LOGOS: Record<string, any> = {
 
 interface Props {
   experience: ExperienceItem
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
+  setCurrentModal: React.Dispatch<React.SetStateAction<string>>
+  current: boolean
 }
 
-const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
+const ExperienceModal: React.FC<Props> = ({ experience, setCurrentModal, current }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleExitClick = () => {
     document.body.style.overflow = 'unset';
-    setShowModal(false);
+    setCurrentModal('');
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -37,8 +37,8 @@ const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
     handleExitClick();
   };
 
-  return ReactDOM.createPortal(
-    <div className={styles.modal_background} onClick={handleOutsideClick}>
+  return (
+    <div className={styles.modal_background} onClick={handleOutsideClick} style={current ? undefined : { display: 'none' }}>
       <div className={styles.modal} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
           <Image src={x} alt='x' />
@@ -54,8 +54,7 @@ const ExperienceModal: React.FC<Props> = ({ experience, setShowModal }) => {
           ))}
         </div>
       </div>
-    </div>,
-    document.getElementById('portal') as HTMLElement,
+    </div>
   );
 };
 
