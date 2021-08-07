@@ -44,11 +44,11 @@ const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
     >
       <div className={`${i % 2 ? styles.card_left : styles.card_right} ${i === 0 ? styles.head_proj : ''}`}>
         <div className={styles[project.clay]}>
-          <Image src={CLAYS[project.clay]} alt={project.clay} />
+          <Image src={CLAYS[project.clay]} alt={project.clay} placeholder='blur' />
         </div>
         <div className={`${i % 2 ? styles.data_left : styles.data_right}`}>
           <div className={styles.icon}>
-            <Image src={ICONS[project.clay]} alt={project.clay} />
+            <Image src={ICONS[project.clay]} alt={project.clay} placeholder='blur' />
           </div>
           <h2>{project.name}</h2>
           <p className={styles.description}>{project.description}</p>
