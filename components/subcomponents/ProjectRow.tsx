@@ -10,6 +10,7 @@ import boboddy from 'public/clays/boboddy.png';
 import betmateIcon from 'public/icons/betmate.png';
 import therabotIcon from 'public/icons/therabot.png';
 import whiteboardIcon from 'public/icons/whiteboard.png';
+import boboddyIcon from 'public/icons/boboddy.png';
 import rightArrow from 'public/icons/right_arrow.svg';
 
 import styles from 'styles/Projects.module.css';
@@ -25,6 +26,7 @@ const ICONS: Record<string, any> = {
   betmate: betmateIcon,
   therabot: therabotIcon,
   whiteboard: whiteboardIcon,
+  boboddy: boboddyIcon,
 };
 
 interface Props {
@@ -45,11 +47,9 @@ const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
           <Image src={CLAYS[project.clay]} alt={project.clay} />
         </div>
         <div className={`${i % 2 ? styles.data_left : styles.data_right}`}>
-          {ICONS[project.clay] && (
-            <div className={styles.icon}>
-              <Image src={ICONS[project.clay]} alt={project.clay} />
-            </div>
-          )}
+          <div className={styles.icon}>
+            <Image src={ICONS[project.clay]} alt={project.clay} />
+          </div>
           <h2>{project.name}</h2>
           <p className={styles.description}>{project.description}</p>
           <div className={styles.learn_more} onClick={() => handleLearnMore(project)}>

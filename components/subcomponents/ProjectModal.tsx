@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import ReactDOM from 'react-dom';
 import Image from 'next/image';
 import { ProjectItem } from 'types/json';
 
@@ -12,7 +11,7 @@ import newtab from 'public/icons/open_in_new.svg';
 
 import styles from 'styles/Projects.module.css';
 
-const LOGOS: Record<string, any> = {
+const CLAYS: Record<string, any> = {
   betmate,
   therabot,
   whiteboard,
@@ -21,24 +20,26 @@ const LOGOS: Record<string, any> = {
 
 interface Props {
   project: ProjectItem
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
+  setCurrentModal: React.Dispatch<React.SetStateAction<string>>
+  current: boolean
 }
 
-const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
+const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleExitClick = () => {
     document.body.style.overflow = 'unset';
-    setShowModal(false);
+    setCurrentModal('');
   };
 
   const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (modalRef.current?.contains(e.target as Node)) return;
     handleExitClick();
   };
-  return ReactDOM.createPortal(
-    <div className={styles.modal_background} onClick={handleOutsideClick}>
-      <div className={styles.modal} ref={modalRef}>
+
+  return (
+    <div className={`${styles.modal_background} ${current ? styles.background_show : styles.background_hide}`} onClick={handleOutsideClick}>
+      <div className={`${styles.modal} ${current ? styles.modal_show : styles.modal_hide}`} ref={modalRef}>
         <div className={styles.x} onClick={handleExitClick}>
           <Image src={x} alt='x' />
         </div>
@@ -75,13 +76,12 @@ const ProjectModal: React.FC<Props> = ({ project, setShowModal }) => {
         </div>
         <div className={styles.modal_content}>
           <div className={`${styles[project.clay]} ${styles.nomargin}`}>
-            <Image src={LOGOS[project.clay]} alt={project.clay} />
+            <Image src={CLAYS[project.clay]} alt={project.clay} placeholder='blur' />
           </div>
           <p className={styles.modal_explanation}>{project.explanation}</p>
         </div>
       </div>
-    </div>,
-    document.getElementById('portal') as HTMLElement,
+    </div>
   );
 };
 

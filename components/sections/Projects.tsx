@@ -8,23 +8,23 @@ import ProjectRow from 'components/subcomponents/ProjectRow';
 import ProjectModal from 'components/subcomponents/ProjectModal';
 
 const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => {
-  const [modalData, setModalData] = useState<ProjectItem>(projects[0]);
-  const [showModal, setShowModal] = useState(false);
+  const [currentModal, setCurrentModal] = useState<string>('');
 
   const handleLearnMore = (p: ProjectItem) => {
     document.body.style.overflow = 'hidden';
-    setModalData(p);
-    setShowModal(true);
+    setCurrentModal(p.name);
   };
 
   return (
     <div className={styles.main} ref={ref}>
-      {showModal && (
+      {projects.map((p) => (
         <ProjectModal
-          project={modalData}
-          setShowModal={setShowModal}
+          key={p.name}
+          project={p}
+          current={p.name === currentModal}
+          setCurrentModal={setCurrentModal}
         />
-      )}
+      ))}
       {projects.map((p, i) => (
         <ProjectRow
           key={p.name}

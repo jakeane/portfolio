@@ -7,6 +7,8 @@
 }
 
 .container {
+    padding-top: 20px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -51,13 +53,25 @@
 
 .modal_background {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     z-index: 50;
+
+    transition: background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                z-index 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+
+.background_show {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.background_hide {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
 
 
 .modal {
@@ -69,12 +83,21 @@
     left: 50%;
     width: 60vw;
     min-width: 650px;
+    max-width: 750px;
     height: 40vh;
-    transform: translate(-50%, -50%);
 
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.modal_show {
+    transform: translate(-50%, -50%);
+}
+
+.modal_hide {
+    transform: translate(-50%, 150%);
 }
 
 .x {
