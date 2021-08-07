@@ -65,7 +65,6 @@ const Home: React.FC = () => {
         <div className={styles.exp_transition}/>
         <Experience ref={(el) => { navRefs.current[1] = el; }} />
         <Projects ref={(el) => { navRefs.current[2] = el; }} />
-        {/* <div className={styles.about_transition} /> */}
         <About ref={(el) => { navRefs.current[3] = el; }} />
         <Contact ref={(el) => { navRefs.current[4] = el; }} />
       </main>
