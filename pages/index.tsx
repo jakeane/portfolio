@@ -43,13 +43,22 @@ const Home: React.FC = () => {
       setProgress(window.scrollY / ((pageRef.current?.clientHeight ?? 5500) - window.innerHeight));
     };
 
+    const fadeIn = () => {
+      window.document.body.style.opacity = '1';
+    };
+
     window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('load', fadeIn);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', fadeIn);
+    };
   }, []);
 
   return (
-    <div className={styles.container} onLoad={() => { document.body.style.opacity = '1'; }}>
+    <div className={styles.container}>
       <Head>
         <title>Jack Keane</title>
         <meta name="description" content="Portfolio website for Jack Keane" />
