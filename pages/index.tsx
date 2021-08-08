@@ -27,21 +27,22 @@ const Home: React.FC = () => {
     const i = SECTIONS.indexOf(s);
     const el = navRefs.current[i];
     if (!el) return;
-    const offset = i === 0 ? 200 : 100;
-    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    const { innerHeight, pageYOffset } = window;
+    const offset = innerHeight * (i ? 0.1 : 0.2);
+    const y = el.getBoundingClientRect().top + pageYOffset - offset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const { innerHeight } = window;
+      const { innerHeight, scrollY } = window;
       const newClosest = navRefs.current
         .map((r) => r?.getBoundingClientRect().top ?? -10000)
         .map((d) => (d > innerHeight * 0.4 ? -10000 : d))
         .reduce((best, curr, i, arr) => (arr[best] > curr ? best : i), 0);
 
       setClosestSection(newClosest);
-      setProgress(window.scrollY / ((pageRef.current?.clientHeight ?? 5500) - window.innerHeight));
+      setProgress(scrollY / ((pageRef.current?.clientHeight ?? 5500) - innerHeight));
     };
 
     window.addEventListener('scroll', handleScroll);
