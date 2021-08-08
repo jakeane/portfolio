@@ -153,11 +153,9 @@
     .nav_close {
         transform: translate(0%, 100%);
         opacity: 0;
-        /* transform: translate(100%, 0); */
     }
 
     .nav_open {
-        /* transform: translate(-50%, 50%); */
         transform: none;
         opacity: 1;
     }
@@ -165,12 +163,4 @@
     .box {
         display: none;
     }
-
-    /* .name {
-        display: none;
-    }
-
-    .container {
-        height: 28px;
-    } */
 }

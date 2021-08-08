@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import styles from 'styles/AngledCorner.module.css';
 
 interface Props {
