@@ -9,13 +9,16 @@ import styles from 'styles/About.module.css';
 
 const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
+    <div className={styles.header}>
+      <h2>About</h2>
+    </div>
     <AngledCorner styling={styles.angled_corner} right>
       <div className={styles.container}>
         <div className={styles.img_container}>
           <Image src={profile} alt='profile' className={styles.img} />
         </div>
         <div className={styles.text_container}>
-          <h2 className={styles.title}>About me</h2>
+          {/* <h2 className={styles.title}>About me</h2> */}
           {about.map((paragraph, i) => (
             <p key={i} className={styles.body}>{paragraph}</p>
           ))}

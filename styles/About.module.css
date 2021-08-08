@@ -2,10 +2,20 @@
     margin-left: 25vw;
 }
 
+.header {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 10px;
+}
+
 .angled_corner {
     width: 55vw;
     height: 70vh;
     min-height: 500px;
+    max-height: 800px;
     padding-bottom: 50px;
 }
 
