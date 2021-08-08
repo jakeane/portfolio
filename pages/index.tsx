@@ -54,7 +54,10 @@ const Home: React.FC = () => {
     <div className={styles.container}>
       <Head>
         <title>Jack Keane</title>
-        <meta name="description" content="Portfolio website for Jack Keane" />
+        <meta
+          name="description"
+          content="Jack Keane is a Dartmouth computer science student. He is pursuing a career in software engineering with focuses on artificial intelligence and full-stack web development."
+        />
         <link rel="icon" href="/icons/logo_black.svg" />
       </Head>
 
