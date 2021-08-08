@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
 import styles from 'styles/NavBar.module.css';
+import { SECTIONS } from 'utils/constants';
 import Links from './Links';
 import NavItem from './NavItem';
 
@@ -9,8 +10,6 @@ interface Props {
   open: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
 }
-
-const SECTIONS = ['Home', 'Experience', 'Projects', 'About', 'Links'];
 
 const NavBar: React.FC<Props> = (props) => (
   <nav className={styles.nav}>

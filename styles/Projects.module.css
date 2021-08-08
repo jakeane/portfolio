@@ -2,6 +2,15 @@
     margin-left: 20vw;
 }
 
+.header {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 10px;
+}
+
 .ac_head {
     height: 60vh;
     min-height: 400px;
@@ -197,10 +206,12 @@
 @media only screen and (min-width: 2000px) {
     .ac_head {
         width: 45vw;
+        max-height: 600px;
     }
 
     .ac_tail {
         margin-left: 10vw;
+        max-height: 700px;
         width: 30vw;
     }
 
@@ -336,9 +347,3 @@
         display: none;
     }
 }
-
-/* @media only screen and (max-width: 400px) {
-    .modal {
-        height: 80vh;
-    }
-} */

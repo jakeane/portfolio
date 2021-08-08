@@ -1,11 +1,8 @@
 .nav {
     position: fixed;
     right: 0;
-    top: 0; 
-    bottom: 0; 
-    margin-top: auto; 
-    margin-bottom: auto; 
-    height: 100px;
+    top: 50%;
+    transform: translate(0%, -50%);
     z-index: 10;
   }
 
@@ -62,6 +59,11 @@
 
 @media only screen and (max-width: 1000px) {
 
+    .nav {
+        top: 0;
+        transform: none;
+    }
+
     .links {
         display: flex;
         flex-direction: column;
@@ -76,7 +78,7 @@
     .hamburger {
         display: block;
         position: fixed;
-        top: 12px;
+        top: 20px;
         right: 15px;
     }
 
@@ -153,11 +155,9 @@
     .nav_close {
         transform: translate(0%, 100%);
         opacity: 0;
-        /* transform: translate(100%, 0); */
     }
 
     .nav_open {
-        /* transform: translate(-50%, 50%); */
         transform: none;
         opacity: 1;
     }
@@ -165,12 +165,4 @@
     .box {
         display: none;
     }
-
-    /* .name {
-        display: none;
-    }
-
-    .container {
-        height: 28px;
-    } */
 }

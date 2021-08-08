@@ -1,21 +1,24 @@
 import Head from 'next/head';
-
-import Landing from 'components/sections/Landing';
-import Experience from 'components/sections/Experience';
-import Projects from 'components/sections/Projects';
-import About from 'components/sections/About';
-import Contact from 'components/sections/Contact';
-import NavBar from 'components/subcomponents/NavBar';
-import Heading from 'components/subcomponents/Heading';
-import styles from 'styles/Home.module.css';
 import { useEffect, useRef, useState } from 'react';
 
-const SECTIONS = ['Home', 'Experience', 'Projects', 'About', 'Links'];
+import {
+  About,
+  Contact,
+  Experience,
+  Landing,
+  Projects,
+} from 'components/sections';
+import { NavBar, Heading } from 'components/subcomponents';
+import { SECTIONS } from 'utils/constants';
+
+import styles from 'styles/Home.module.css';
 
 const Home: React.FC = () => {
   const navRefs = useRef<(HTMLDivElement | null)[]>(Array(5).fill(null));
+  const pageRef = useRef<HTMLDivElement>(null);
   const [closestSection, setClosestSection] = useState(0);
   const [navBarOpen, setNavBarOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const scrollTo = (s: string) => {
     setNavBarOpen(false);
@@ -37,6 +40,7 @@ const Home: React.FC = () => {
         .reduce((best, curr, i, arr) => (arr[best] > curr ? best : i), 0);
 
       setClosestSection(newClosest);
+      setProgress(window.scrollY / ((pageRef.current?.clientHeight ?? 5500) - window.innerHeight));
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -52,7 +56,8 @@ const Home: React.FC = () => {
         <link rel="icon" href="/icons/logo_black.svg" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.main} ref={pageRef}>
+        <div className={styles.progress} style={{ width: `${progress * 100}%` }} />
         <NavBar
           scrollTo={scrollTo}
           closestSection={closestSection}

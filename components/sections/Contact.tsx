@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { AngledCorner } from 'components/utils';
 import styles from 'styles/Contact.module.css';
-import AngledCorner from 'components/utils/AngledCorner';
 
-import Links from 'components/subcomponents/Links';
+import { Links } from 'components/subcomponents';
 
 const Contact: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>

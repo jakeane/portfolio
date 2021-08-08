@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
-import styles from 'styles/Experience.module.css';
-import AngledCorner from 'components/utils/AngledCorner';
-
-import experience from 'public/data/experience.json';
+import { AngledCorner } from 'components/utils';
+import { ExperienceCard, ExperienceModal } from 'components/subcomponents';
 import { ExperienceItem } from 'types/json';
-import ExperienceCard from 'components/subcomponents/ExperienceCard';
-import ExperienceModal from 'components/subcomponents/ExperienceModal';
+import experience from 'public/data/experience.json';
+
+import styles from 'styles/Experience.module.css';
 
 const Experience: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => {
   const [currentModal, setCurrentModal] = useState<string>('');
@@ -18,6 +17,9 @@ const Experience: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref)
 
   return (
     <div className={styles.main} ref={ref}>
+      <div className={styles.header}>
+        <h2>Experience</h2>
+      </div>
       {experience.map((e) => (
         <ExperienceModal
           key={`${e.company}-${e.position}`}

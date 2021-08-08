@@ -1,6 +1,6 @@
-import AngledCorner from 'components/utils/AngledCorner';
 import React from 'react';
 
+import { AngledCorner } from 'components/utils';
 import styles from 'styles/Landing.module.css';
 
 interface Props {

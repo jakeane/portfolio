@@ -1,33 +1,11 @@
 import Image from 'next/image';
 
-import AngledCorner from 'components/utils/AngledCorner';
+import { AngledCorner } from 'components/utils';
 import { ProjectItem } from 'types/json';
-
-import betmate from 'public/clays/betmate.png';
-import therabot from 'public/clays/therabot.png';
-import whiteboard from 'public/clays/whiteboard.png';
-import boboddy from 'public/clays/boboddy.png';
-import betmateIcon from 'public/icons/betmate.png';
-import therabotIcon from 'public/icons/therabot.png';
-import whiteboardIcon from 'public/icons/whiteboard.png';
-import boboddyIcon from 'public/icons/boboddy.png';
+import { CLAYS, ICONS } from 'utils/images';
 import rightArrow from 'public/icons/right_arrow.svg';
 
 import styles from 'styles/Projects.module.css';
-
-const CLAYS: Record<string, any> = {
-  betmate,
-  therabot,
-  whiteboard,
-  boboddy,
-};
-
-const ICONS: Record<string, any> = {
-  betmate: betmateIcon,
-  therabot: therabotIcon,
-  whiteboard: whiteboardIcon,
-  boboddy: boboddyIcon,
-};
 
 interface Props {
   project: ProjectItem
