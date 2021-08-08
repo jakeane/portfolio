@@ -34,9 +34,10 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const { innerHeight } = window;
       const newClosest = navRefs.current
         .map((r) => r?.getBoundingClientRect().top ?? -10000)
-        .map((d) => (d > 400 ? -10000 : d))
+        .map((d) => (d > innerHeight * 0.4 ? -10000 : d))
         .reduce((best, curr, i, arr) => (arr[best] > curr ? best : i), 0);
 
       setClosestSection(newClosest);
