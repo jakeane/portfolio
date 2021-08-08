@@ -176,6 +176,11 @@
     flex-direction: column;
 }
 
+.modal_sumtitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .modal_anchor {
     display: flex;
 }
@@ -333,6 +338,10 @@
 
     .modal_title {
         margin-bottom: 0.5em;
+    }
+
+    .modal_sumtitle {
+        font-size: 16px;
     }
 
     .tools {

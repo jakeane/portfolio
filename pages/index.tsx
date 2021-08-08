@@ -49,7 +49,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onLoad={() => { document.body.style.opacity = '1'; }}>
       <Head>
         <title>Jack Keane</title>
         <meta name="description" content="Portfolio website for Jack Keane" />
