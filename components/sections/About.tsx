@@ -2,9 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 
 import { AngledCorner } from 'components/utils';
-import styles from 'styles/About.module.css';
-
 import profile from 'public/images/jackkeane.jpg';
+import about from 'public/data/about.json';
+
+import styles from 'styles/About.module.css';
 
 const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
   <div className={styles.main} ref={ref}>
@@ -15,13 +16,9 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
         </div>
         <div className={styles.text_container}>
           <h2 className={styles.title}>About me</h2>
-          <p className={styles.body}>
-            I am a senior at Dartmouth College majoring in Computer Science and minoring in Quantitative Social Sciences.
-            My interests are strongest in artificial intelligence and full-stack web development, especially where the two areas intersect.
-          </p>
-          <p className={styles.body}>
-            Ask me about the time I broke both of my hands, or the time I broke my leg, or one of the five times I broke my wrist.
-          </p>
+          {about.map((paragraph, i) => (
+            <p key={i} className={styles.body}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </AngledCorner>
