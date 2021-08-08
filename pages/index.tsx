@@ -43,17 +43,10 @@ const Home: React.FC = () => {
       setProgress(window.scrollY / ((pageRef.current?.clientHeight ?? 5500) - window.innerHeight));
     };
 
-    const fadeIn = () => {
-      window.document.body.style.opacity = '1';
-    };
-
     window.addEventListener('scroll', handleScroll);
-
-    window.addEventListener('load', fadeIn);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('load', fadeIn);
     };
   }, []);
 
