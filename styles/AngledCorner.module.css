@@ -66,3 +66,29 @@
     }
 
 }
+
+@media only screen and (max-width: 520px) {
+    .box::before {
+        border-width: var(--small-corner-size);
+    }
+
+    .box::after {
+        border-width: var(--small-corner-size);
+    }
+
+    .left::before {
+        border-width: var(--small-corner-size);
+    }
+
+    .left::after {
+        border-width: var(--small-corner-size);
+    }
+
+    .right::before {
+        border-width: var(--small-corner-size);
+    }
+
+    .right::after {
+        border-width: var(--small-corner-size);
+    }
+}

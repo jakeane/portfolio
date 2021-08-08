@@ -3,7 +3,12 @@
 }
 
 .header {
-    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 10px;
 }
 
 .ac_head {
@@ -221,14 +226,7 @@
         margin-left: 0;
     }
 
-    .header {
-        display: flex;
-        width: 60vw;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .ac_head, .ac_tail, .header {
+    .ac_head, .ac_tail {
         width: 100vw;
         max-width: none;
     }

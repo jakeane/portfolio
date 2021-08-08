@@ -59,6 +59,11 @@
 
 @media only screen and (max-width: 1000px) {
 
+    .nav {
+        top: 0;
+        transform: none;
+    }
+
     .links {
         display: flex;
         flex-direction: column;
