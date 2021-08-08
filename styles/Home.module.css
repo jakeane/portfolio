@@ -4,6 +4,16 @@
   justify-content: center;
   align-items: center;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 8px;
+    background-color: white;
+    z-index: 1000;
 }
 
 .exp_transition {
@@ -36,7 +46,6 @@
 
 
 @media only screen and (max-width: 1000px) {
-
     .exp_transition {
         border-right: none;
     }
