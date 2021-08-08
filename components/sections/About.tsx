@@ -18,7 +18,6 @@ const About: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) => (
           <Image src={profile} alt='profile' className={styles.img} />
         </div>
         <div className={styles.text_container}>
-          {/* <h2 className={styles.title}>About me</h2> */}
           {about.map((paragraph, i) => (
             <p key={i} className={styles.body}>{paragraph}</p>
           ))}
