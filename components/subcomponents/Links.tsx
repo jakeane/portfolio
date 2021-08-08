@@ -10,7 +10,6 @@ import newTab from 'public/icons/open_in_new.svg';
 import styles from 'styles/Contact.module.css';
 
 const Links: React.FC = () => (
-
   <div className={styles.links}>
     <a className={styles.anchor} href={GITHUB} target='_blank' rel='noreferrer'>
       <Image src={github} alt='github' />

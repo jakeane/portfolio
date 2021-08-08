@@ -14,7 +14,6 @@ interface Props {
 }
 
 const ProjectRow: React.FC<Props> = ({ project, handleLearnMore, i }) => (
-
   <div key={project.name} className={i > 0 ? styles.tail_proj : undefined}>
     <AngledCorner
       right={!(i % 2)}
