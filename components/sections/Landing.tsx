@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, ref) => (
-  <div className={styles.main} ref={ref}>
+  <header className={styles.main} ref={ref}>
     <div className={styles.leftpad} />
     <AngledCorner styling={styles.angled_corner} right>
       <h1 className={styles.name}>John Keane</h1>
@@ -17,7 +17,7 @@ const Landing: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props, r
       <div className={styles.arrow} onClick={() => props.scrollTo('Experience')}/>
     </AngledCorner>
     <div className={styles.rightpad} />
-  </div>
+  </header>
 );
 
 export default React.forwardRef(Landing);
