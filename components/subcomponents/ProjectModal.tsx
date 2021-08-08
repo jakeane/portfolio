@@ -36,18 +36,18 @@ const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) =>
         <h2 className={styles.modal_title}>{project.name}</h2>
         <div className={styles.modal_summary}>
           <div className={`${styles.modal_sumitem} ${styles.timeline}`}>
-            <h4>Timeline</h4>
+            <h3 className={styles.modal_sumtitle}>Timeline</h3>
             <p>{project.start} -</p>
             <p>{project.end}</p>
           </div>
           <div className={`${styles.modal_sumitem} ${styles.tools}`}>
-            <h4>Tools</h4>
+            <h3 className={styles.modal_sumtitle}>Tools</h3>
             {project.tools.map((t) => (
               <p key={t}>{t}</p>
             ))}
           </div>
           <div className={`${styles.modal_sumitem} ${styles.deliverables}`}>
-            <h4>Deliverables</h4>
+            <h3 className={styles.modal_sumtitle}>Deliverables</h3>
             {Object.entries(project.deliverables).map(([name, link]) => (
               <a
                 className={styles.modal_anchor}
