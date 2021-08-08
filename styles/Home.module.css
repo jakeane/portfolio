@@ -23,42 +23,14 @@
     margin-left: 20vw;
 }
 
-.proj_transition {
-    border-left: 1px solid white;
-    width: 60vw;
-    height: 5vh;
-    margin-left: 20vw;
-}
-
-.about_transition {
-    border-left: 1px solid white;
-    width: 60vw;
-    height: 5vh;
-    margin-left: 24.95vw;
-}
-
-.contact_transition {
-    border-right: 1px solid white;
-    width: 55vw;
-    height: 10vh;
-    margin-left: 24.95vw;
-}
-
-
 @media only screen and (max-width: 1000px) {
     .exp_transition {
         border-right: none;
     }
+}
 
-    .proj_transition {
-        border-left: none;
-    }
-
-    .about_transition {
-        border-left: none;
-    }
-
-    .contact_transition {
-        border-right: none;
+@media only screen and (max-width: 520px) {
+    .exp_transition {
+        height: 38vh
     }
 }

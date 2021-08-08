@@ -67,4 +67,5 @@ p {
 
 :root {
   --corner-size: 100px;
+  --small-corner-size: 40px;
 }

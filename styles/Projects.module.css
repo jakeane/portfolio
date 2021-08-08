@@ -2,6 +2,10 @@
     margin-left: 20vw;
 }
 
+.header {
+    display: none;
+}
+
 .ac_head {
     height: 60vh;
     min-height: 400px;
@@ -197,10 +201,12 @@
 @media only screen and (min-width: 2000px) {
     .ac_head {
         width: 45vw;
+        max-height: 600px;
     }
 
     .ac_tail {
         margin-left: 10vw;
+        max-height: 700px;
         width: 30vw;
     }
 
@@ -215,7 +221,14 @@
         margin-left: 0;
     }
 
-    .ac_head, .ac_tail {
+    .header {
+        display: flex;
+        width: 60vw;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .ac_head, .ac_tail, .header {
         width: 100vw;
         max-width: none;
     }

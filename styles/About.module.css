@@ -50,6 +50,7 @@
 
     .angled_corner {
         width: 45vw;
+        /* max-height: 800px; */
     }
 
     .container {

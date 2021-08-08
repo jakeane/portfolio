@@ -51,6 +51,14 @@
     border-left: var(--corner-size) solid transparent;
 }
 
+.small::before {
+    border-width: var(--small-corner-size);
+}
+
+.small::after {
+    border-width: var(--small-corner-size);
+}
+
 @media only screen and (max-width: 1000px) {
     .box {
        border-left: none; 
