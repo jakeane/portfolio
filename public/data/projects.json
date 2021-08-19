@@ -8,6 +8,7 @@
         "tools": ["TypeScript", "Express", "Socket.IO", "MongoDB", "AWS Lambda"],
         "deliverables": {
             "Frontend GitHub": "https://github.com/dali-lab/betmate-frontend",
+            "Backend Documentation": "https://documenter.getpostman.com/view/15269182/TzzBoagE",
             "Website": "https://betmate-prod.netlify.app/"
         },
         "clay": "betmate"
