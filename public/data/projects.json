@@ -22,7 +22,8 @@
         "tools": ["Python", "Flutter", "TensorFlow", "AWS ECS"],
         "deliverables": {
             "App GitHub": "https://github.com/jakeane/therabot",
-            "Emotion API GitHub": "https://github.com/jakeane/emotion_api"
+            "Emotion API GitHub": "https://github.com/jakeane/emotion_api",
+            "App Demo": "/documents/chatbot_demo.mp4"
         },
         "clay": "therabot"
     },
