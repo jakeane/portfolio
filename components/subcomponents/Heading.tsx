@@ -22,7 +22,7 @@ const Heading: React.FC = () => (
       <a className={styles.anchor} href={LINKEDIN} target='_blank' rel='noreferrer'>
         <Image src={linkedin} alt='linkedin' />
       </a>
-      <a className={styles.anchor} href={`mailto:${EMAIL}`}>
+      <a className={styles.anchor} href={`mailto:${EMAIL}`} target='_blank' rel='noreferrer'>
         <Image src={mail} alt='mail' />
       </a>
       <a href='/documents/jkeane_resume.pdf' target='_blank'>
