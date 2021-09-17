@@ -77,13 +77,13 @@
 }
 
 .betmate {
-    margin-right: -150px;
+    margin-left: -150px;
     width: 300px;
     height: 202.85px;
 }
 
 .therabot {
-    margin-left: -70.465px;
+    margin-right: -70.465px;
     width: 140.93px;
     height: 300px;
 }
@@ -253,11 +253,11 @@
         width: 75vw;
     }
 
-    .betmate, .whiteboard {
+    .therabot, .whiteboard {
         margin-right: 0;
     }
 
-    .therabot, .boboddy {
+    .betmate, .boboddy {
         margin-left: 0;
     }
 

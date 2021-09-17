@@ -18,7 +18,6 @@ const ProjectModal: React.FC<Props> = ({ project, current, setCurrentModal }) =>
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleExitClick = () => {
-    document.body.style.overflow = 'unset';
     setCurrentModal('');
   };
 

@@ -11,7 +11,6 @@ const Experience: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref)
   const [currentModal, setCurrentModal] = useState<string>('');
 
   const handleLearnMore = (e: ExperienceItem) => {
-    document.body.style.overflow = 'hidden';
     setCurrentModal(`${e.company}-${e.position}`);
   };
 

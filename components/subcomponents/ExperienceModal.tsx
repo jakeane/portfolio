@@ -16,7 +16,6 @@ const ExperienceModal: React.FC<Props> = ({ experience, setCurrentModal, current
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleExitClick = () => {
-    document.body.style.overflow = 'unset';
     setCurrentModal('');
   };
 
