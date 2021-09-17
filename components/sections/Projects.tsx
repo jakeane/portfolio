@@ -10,7 +10,6 @@ const Projects: React.ForwardRefRenderFunction<HTMLDivElement> = (_props, ref) =
   const [currentModal, setCurrentModal] = useState<string>('');
 
   const handleLearnMore = (p: ProjectItem) => {
-    document.body.style.overflow = 'hidden';
     setCurrentModal(p.name);
   };
 

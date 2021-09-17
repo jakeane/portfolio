@@ -1,24 +1,10 @@
 [
     {
-        "name": "BetMate",
-        "description": "A platform to spectate and wager on chess matches",
-        "explanation": "BetMate is a product built in the DALI Lab, and it is aimed to improve engagement for chess by introducing the element of gambling virtual coins. I architected the backend server with TypeScript, Express, Socket.IO, and MongoDB to broadcast chess matches and manage wagers. I also set up some Python microservices on AWS Lambda, which hosted machine learning models to determine betting odds.",
-        "start": "Mar 2021",
-        "end": "Present",
-        "tools": ["TypeScript", "Express", "Socket.IO", "MongoDB", "AWS Lambda"],
-        "deliverables": {
-            "Frontend GitHub": "https://github.com/dali-lab/betmate-frontend",
-            "Backend Documentation": "https://documenter.getpostman.com/view/15269182/TzzBoagE",
-            "Website": "https://betmate-prod.netlify.app/"
-        },
-        "clay": "betmate"
-    },
-    {
         "name": "Therabot",
         "description": "A chatbot trained to be a mental health therapist",
         "explanation": "Therabot is a research project in the Geisel School of Medicine to build a chatbot to treat anxiety and depressive disorder. The ultimate goal of this chatbot is to lower access barriers for treating mental health. I built the mobile application using Flutter. I also developed a workflow to curate training data, train the chatbot on high performance computing clusters, and deploy the chatbot on AWS.",
         "start": "Jun 2020",
-        "end": "Jun 2021",
+        "end": "Present",
         "tools": ["Python", "Flutter", "TensorFlow", "AWS ECS"],
         "deliverables": {
             "App GitHub": "https://github.com/jakeane/therabot",
@@ -26,6 +12,20 @@
             "App Demo": "/documents/chatbot_demo.mp4"
         },
         "clay": "therabot"
+    },
+    {
+        "name": "BetMate",
+        "description": "A platform to spectate and wager on chess matches",
+        "explanation": "BetMate is a product built in the DALI Lab, and it is aimed to improve engagement for chess by introducing the element of gambling virtual coins. I architected the backend server with TypeScript, Express, Socket.IO, and MongoDB to broadcast chess matches and manage wagers. I also set up some Python microservices on AWS Lambda, which hosted machine learning models to determine betting odds.",
+        "start": "Mar 2021",
+        "end": "Aug 2021",
+        "tools": ["TypeScript", "Express", "Socket.IO", "MongoDB", "AWS Lambda"],
+        "deliverables": {
+            "Frontend GitHub": "https://github.com/dali-lab/betmate-frontend",
+            "Backend Documentation": "https://documenter.getpostman.com/view/15269182/TzzBoagE",
+            "Website": "https://betmate-prod.netlify.app/"
+        },
+        "clay": "betmate"
     },
     {
         "name": "whiteboard",

@@ -8,6 +8,14 @@
         "logo": "dali"
     },
     {
+        "company": "Geisel School of Medicine",
+        "position": "Research Assistant",
+        "start": "Jun 2020",
+        "end": "Present",
+        "description": "Performed research focused on the development and testing of a chatbot to treat anxiety and depressive disorder, which is aimed to lower access barriers for treating mental health. Architected the application infrastructure, and spearheaded the training of the chatbot.",
+        "logo": "geisel"
+    },
+    {
         "company": "Bank of America",
         "position": "Software Engineer Intern",
         "start": "Jun 2021",
@@ -22,14 +30,6 @@
         "end": "Jun 2021",
         "description": "Collaborated with a professor to design a new course in the computer science department for reinforcement learning. Designed assignments and projects aimed to help students build intuition about various reinforcement learning concepts and algorithms.",
         "logo": "dartmouth"
-    },
-    {
-        "company": "Geisel School of Medicine",
-        "position": "Research Assistant",
-        "start": "Jun 2020",
-        "end": "Jun 2021",
-        "description": "Performed research focused on the development and testing of a chatbot to treat anxiety and depressive disorder, which is aimed to lower access barriers for treating mental health. Architected the application infrastructure, and spearheaded the training of the chatbot.",
-        "logo": "geisel"
     },
     {
         "company": "Dartmouth College",
